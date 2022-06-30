@@ -1,4 +1,4 @@
-const singleWork = () => {
+const PageSingleWork = () => {
     return (
         <>
         <h2>Single Work page</h2>
@@ -6,4 +6,4 @@ const singleWork = () => {
     )
 }
 
-export default singleWork;
+export default PageSingleWork;

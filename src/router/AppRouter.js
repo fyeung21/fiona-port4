@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Work from '../pages/work';
-import About from '../pages/about';
-import SingleWork from '../pages/singleWork';
-import NotFoundPage from '../pages/404';
+import PageAbout from '../pages/PageAbout';
+import PageWork from '../pages/PageWork';
+import PageSingleWork from '../pages/PageSingleWork';
+import NotFoundPage from '../pages/Page404';
 import Header from '../components/Header/Header';
 
 const AppRouter = () => {
@@ -10,9 +10,9 @@ const AppRouter = () => {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<Work />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/works/:id' element={<SingleWork />} />
+        <Route path='/' element={<PageWork />} />
+        <Route path='/about' element={<PageAbout />} />
+        <Route path='/works/:id' element={<PageSingleWork />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
