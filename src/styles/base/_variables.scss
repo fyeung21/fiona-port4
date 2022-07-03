@@ -1,0 +1,33 @@
+
+// GENERAL COLOURS
+$main-color: #f1f1f1;
+$accent-color: #5468cf;
+
+// BACKGROUNDS
+$main-background: #f8f8f8;
+$gradient: linear-gradient(to right bottom, #ffffff, #eae9f7, #d3d3f0, #b9bfea, #9dabe3);
+
+// FONT COLOURS
+$font-color-text: #121212;
+$font-color-invert: #f8f8f8;
+$font-color-link: $accent-color;
+
+// FONTS
+$font-main: 'Poppins', Arial, sans-serif;
+$font-heading: $font-main;
+$font-body: $font-main;
+
+// FONT WEIGHTS
+$font-weight-body: 500;
+$font-weight-heading: 800;
+
+// MEDIA QUERIES
+$tablet: 37.5em;
+// 768 px -- large tablets
+$large-tablet: 48em;
+// 1024px  -- laptops
+$desktop: 64em;
+// 1200px -- med-screen
+$med-screen: 75em;
+// 1440px -- large screen
+$large-screen: 90em;
