@@ -1,5 +1,9 @@
-// Base
+// BASE
 
 @use './base/normalize';
 @use './base/variables';
 @use './base/general';
+
+// COMPONENTS
+
+@use './components/header';
