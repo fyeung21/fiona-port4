@@ -1,3 +1,4 @@
+import ShortStack from "./ShortStack";
 
 const ProjectCard = () => {
     return (
@@ -8,7 +9,7 @@ const ProjectCard = () => {
             <div className='card-text-container'>
                 <h2>{"project title"}</h2>
                 <p>{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem."}</p>
-                <p>{"HTML CSS"}</p>
+                <ShortStack/>
             </div>
         </article>
     )
