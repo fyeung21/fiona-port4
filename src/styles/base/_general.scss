@@ -1,0 +1,45 @@
+@use '../base/variables' as *;
+
+// TYPOGRAPHY
+
+body {
+    margin: 0;
+    background-image: $gradient;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    font-family: $font-body;
+    color: $font-color-text;
+
+    a {
+        color: $font-color-text;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $accent-color;
+        }
+    }
+}
+
+h1 {
+    font-family: $font-heading;
+}
+
+ul{
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 2.5rem 1rem;
+
+    @media (min-width: $tablet) {
+        margin: 6rem 2rem 0;
+    }
+
+    @media (min-width: $desktop) {
+        margin: 8rem auto 0;
+    }
+}
