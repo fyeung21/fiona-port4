@@ -1,14 +1,15 @@
-import BannerImg from "../components/SingleWork/BannerImg";
-import Stats from "../components/SingleWork/Stats";
+import ProjectNav from '../components/ProjectNav/ProjectNav';
+import BannerImg from '../components/SingleWork/BannerImg';
+import Stats from '../components/SingleWork/Stats';
 
 const PageSingleWork = () => {
-    return (
-        <>
-        <h2>Single Work page</h2>
-        <BannerImg/>
-        <Stats/>
-        </>
-    )
-}
+  return (
+    <section className='page-single-work'>
+      <BannerImg />
+      <Stats />
+      <ProjectNav />
+    </section>
+  );
+};
 
 export default PageSingleWork;
