@@ -1,10 +1,9 @@
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import MainProjects from "../components/MainProjects/MainProjects";
 
 const PageWork = () => {
     return (
         <>
-        <h2>Work Page</h2>
-        <ProjectCard/>
+        <MainProjects/>
         </>
     )
 }
