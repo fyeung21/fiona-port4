@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {useParams} from 'react-router-dom';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 const MainProjects = () => {
@@ -23,7 +24,7 @@ const MainProjects = () => {
 
   return (
     <>
-      {isLoaded ? (
+      {/* {isLoaded ? ( */}
         <>
           <section className="main-projects-container">
             <ProjectCard />
@@ -34,9 +35,9 @@ const MainProjects = () => {
             <ProjectCard />
           </section>
         </>
-      ) : (
+      {/* ) : ( */}
         <p>Loading...</p>
-      )}
+      {/* )} */}
     </>
   );
 };

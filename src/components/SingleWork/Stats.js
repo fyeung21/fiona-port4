@@ -1,17 +1,17 @@
 
-const Stats = () => {
+const Stats = ({briefText, liveLink, githubLink, platform, roles, technologies}) => {
     return (
         <>
         <section class="stats-container">
             <h2>{"Project Title"}</h2>
             <article>
                 <h3>brief</h3>
-                <p>{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet."}</p>
+                <p>{briefText}</p>
             </article>
             <article className="cta-container">
                 {/* if statement for live site cta */}
-                <a href={""}>live site</a>
-                <a href={""}>view github</a>
+                <a href={liveLink}>live site</a>
+                <a href={githubLink}>view github</a>
             </article>
             <article>
                 <h3>platforms</h3>

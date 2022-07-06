@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {useParams} from 'react-router-dom';
 import ProjectNav from '../components/ProjectNav/ProjectNav';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
@@ -29,7 +30,14 @@ const PageSingleWork = () => {
         <>
           <section className="page-single-work">
             <BannerImg />
-            <Stats />
+            <Stats
+              briefText={restData.acf.brief_description}
+              liveLink={restData.acf.live_demo.url}
+              githubLink={restData.acf.view_github.url}
+              platform={''}
+              roles={''}
+              technologies={''}
+            />
             <ProjectNav />
           </section>
         </>
