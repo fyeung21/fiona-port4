@@ -4,7 +4,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 
 const MainProjects = () => {
   const { id } = useParams();
-  const restPath = `https://fionayeung.site/wp-portfolio/wp-json/wp/v2/fio-project/${id}?acf_format=standard`;
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project/${id}?acf_format=standard`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
