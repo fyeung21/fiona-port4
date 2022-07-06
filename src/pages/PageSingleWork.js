@@ -28,15 +28,15 @@ const PageSingleWork = () => {
     <>
       {isLoaded ? (
         <>
-          <section className="page-single-work">
+<section className="page-single-work">
             <BannerImg />
             <Stats
               briefText={restData[0].acf.brief_description}
               liveLink={restData[0].acf.live_demo.url}
               githubLink={restData[0].acf.view_github.url}
-              // platform={''}
+              platform={restData[0].acf.platforms}
               // roles={''}
-              // technologies={''}
+              technology={restData[0].acf.technology}
             />
             <ProjectNav />
           </section>
