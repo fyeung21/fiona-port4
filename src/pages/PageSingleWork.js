@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ProjectNav from '../components/ProjectNav/ProjectNav';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
