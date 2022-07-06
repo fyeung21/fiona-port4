@@ -3,8 +3,8 @@ import {useParams} from 'react-router-dom';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 const MainProjects = () => {
-  const { id } = useParams();
-  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project/${id}?acf_format=standard`;
+  const { slug } = useParams();
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 

@@ -5,8 +5,8 @@ import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
 
 const PageSingleWork = () => {
-  const { id } = useParams();
-  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project/${id}?acf_format=standard`;
+  const { slug } = useParams();
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -31,12 +31,12 @@ const PageSingleWork = () => {
           <section className="page-single-work">
             <BannerImg />
             <Stats
-              briefText={restData.acf.brief_description}
-              liveLink={restData.acf.live_demo.url}
-              githubLink={restData.acf.view_github.url}
-              platform={''}
-              roles={''}
-              technologies={''}
+              briefText={restData[0].acf.brief_description}
+              liveLink={restData[0].acf.live_demo.url}
+              githubLink={restData[0].acf.view_github.url}
+              // platform={''}
+              // roles={''}
+              // technologies={''}
             />
             <ProjectNav />
           </section>

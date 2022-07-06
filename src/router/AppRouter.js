@@ -15,7 +15,7 @@ const AppRouter = () => {
           <Routes>
             <Route path="/" element={<PageWork />} />
             <Route path="/about" element={<PageAbout />} />
-            <Route path="/works/:id" element={<PageSingleWork />} />
+            <Route path="/works/:slug" element={<PageSingleWork />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </main>
