@@ -1,19 +1,40 @@
+import { useState, useEffect } from 'react';
 import Skills from '../components/Skills/Skills';
 
 const PageAbout = () => {
+  const restPath = 'https://fionayeung.site/wp-portfolio/wp-json/wp/v2/pages/9';
+  const [restData, setData] = useState([]);
+  const [isLoaded, setLoadStatus] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(restPath);
+      if (response.ok) {
+        const data = await response.json();
+        setData(data);
+        setLoadStatus(true);
+      } else {
+        setLoadStatus(false);
+      }
+    };
+    fetchData();
+  }, [restPath]);
+
   return (
     <>
-      <h2>About Me</h2>
-      <div className='profile-img-container'>
-        <img src={""} alt="profile img" />
-      </div>
-      <p>Location: {'Vancouver, BC'}</p>
-      <p>
-        {
-          'Nulla id dictum nulla, sit amet tincidunt orci. Curabitur ut ex lorem. Aliquam vel erat vitae ex posuere porttitor vitae vitae leo. Fusce pulvinar dui nec hendrerit efficitur. Nulla gravida enim vitae tristique hendrerit. Pellentesque neque libero, accumsan ut posuere aliquet, imperdiet et neque. Mauris interdum enim odio, eget fermentum nulla scelerisque eu. Etiam vestibulum libero vel dui rutrum commodo. Phasellus commodo feugiat enim ac convallis. Vestibulum ultrices, turpis ac pharetra tincidunt, nisi mi accumsan neque, ac rutrum purus lectus in orci. Cras non metus ac diam posuere vehicula.'
-        }
-      </p>
-      <Skills />
+      {isLoaded ? (
+        <>
+          <h2>{restData.title.rendered}</h2>
+          <div className="profile-img-container">
+            <img src={''} alt="profile img" />
+          </div>
+          <p>Location: {restData.acf.location}</p>
+          <p>{restData.acf.bio}</p>
+          <Skills />
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 };
