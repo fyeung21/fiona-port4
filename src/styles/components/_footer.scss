@@ -1,0 +1,32 @@
+@use "../base/variables" as *;
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    // position: absolute;
+
+    div {
+        display: flex;
+        // align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+
+            li {
+                padding: 0 1rem;
+
+                a {
+                    color: $font-color-text;
+
+                    &:hover {
+                        border-bottom: 2px solid $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
