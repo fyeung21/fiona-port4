@@ -1,0 +1,11 @@
+@use "../base/variables" as *;
+
+.main-projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
