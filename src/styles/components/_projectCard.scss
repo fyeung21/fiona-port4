@@ -4,6 +4,12 @@
     max-width: 500px;
     margin: 0 auto;
 
+    a {
+        &:hover {
+            color: $font-color-text;
+        }
+    }
+
     .card-img-container {
         border-radius: 15px;
         box-shadow: 15px 15px 25px #d8d9dc;
