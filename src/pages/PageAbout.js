@@ -5,7 +5,7 @@ import Placeholder from '../components/coffee-wireframes.jpg';
 const PageAbout = () => {
   const dummyData = ['hello', 'goodbye', 'please', 'thank you'];
 
-  const restPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9';
+  const restPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9?&_embed&acf_format=standard';
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
