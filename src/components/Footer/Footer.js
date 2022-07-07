@@ -1,23 +1,47 @@
+import { useState, useEffect } from 'react';
+
 const Footer = () => {
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages?acf_format=standard&id=31`;
+  const [restData, setData] = useState([]);
+  const [isLoaded, setLoadStatus] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(restPath);
+      if (response.ok) {
+        const data = await response.json();
+        setData(data);
+        setLoadStatus(true);
+      } else {
+        setLoadStatus(false);
+      }
+    };
+    fetchData();
+  }, [restPath]);
+
   return (
     <>
+    {isLoaded ? (
       <section className="footer-section">
-        <cite>&copy; 2022 Fiona Yeung</cite>
+        <cite>&copy; {restData[0].acf.copyright_year} Fiona Yeung</cite>
         <div>
-          <p>Contact me through these channels!</p>
+          <p>{restData[0].acf.footer_message}</p>
           <ul>
             <li>
-              <a href="https://gmail.com">email</a>
+              <a href={restData[0].acf.email_link.url}>{restData[0].acf.email_link.title}</a>
             </li>
             <li>
-              <a href="https://linkedin.com">linkedIn</a>
+              <a href={restData[0].acf.linkedin_link.url}>{restData[0].acf.linkedin_link.title}</a>
             </li>
             <li>
-              <a href="https://github.com">github</a>
+              <a href={restData[0].acf.github_link.url}>{restData[0].acf.github_link.title}</a>
             </li>
           </ul>
         </div>
       </section>
+      ) : (
+        <p>Loading...</p>
+      )};
     </>
   );
 };
