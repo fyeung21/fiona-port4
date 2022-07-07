@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.project-nav-container {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 auto;
+    // padding: 7rem 2rem 2rem;
+
+    .nav-card-container {
+        width: 350px;
+        margin: 0 1rem;
+    }
+}
