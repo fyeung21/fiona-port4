@@ -1,23 +1,20 @@
 import { Link } from 'react-router-dom';
 import ShortStack from './ShortStack';
-import Placeholder from '../coffee-wireframes.jpg';
 
-const ProjectCard = () => {
+const ProjectCard = ({thumbnail, alt, title, excerpt, type}) => {
   return (
     <article className="project-card-container">
       <Link to={`/works/${'workSingle'}`}>
         <div>
           <section className="card-img-container">
-            <img src={Placeholder} alt={'project thumbnail'} />
+            <img src={thumbnail} alt={alt} />
           </section>
           <section className="card-text-container">
-            <h2>{'project title'}</h2>
+            <h2>{title}</h2>
             <p>
-              {
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero '
-              }...see more
+              {excerpt} ...see more
             </p>
-            <ShortStack />
+            <ShortStack type={type}/>
           </section>
         </div>
       </Link>

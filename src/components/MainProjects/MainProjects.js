@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import Placeholder from '../coffee-wireframes.jpg';
 
 const MainProjects = () => {
   const { slug } = useParams();
@@ -27,12 +28,48 @@ const MainProjects = () => {
       {/* {isLoaded ? ( */}
         <>
           <section className="main-projects-container">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
+            <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
+              <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
+              <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
+              <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
+              <ProjectCard 
+              thumbnail={Placeholder}
+              alt={'placeholder'}
+              title={'Project Title'}
+              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
+              type={'wordpress'}
+              />
           </section>
         </>
       {/* ) : ( */}
