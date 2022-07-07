@@ -23,19 +23,9 @@
             object-fit: cover;
         }
     }
-    .short-stack-container {
-        text-align: left;
-        ul {
-            display: flex;
-            justify-content: flex-end;
-
-            li {
-                padding: 0 0.5rem;
-                
-                &:last-child {
-                    padding-right: 0;
-                }
-            }
+    .project-type-container {
+        p {
+            text-align: right;
         }
     }
 
