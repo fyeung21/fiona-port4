@@ -6,6 +6,10 @@ const PageAbout = () => {
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
+  const skillsPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project-tax?';
+  const [skillsData, setSkillsData] = useState([]);
+  const [isSkillsLoaded, setSkillsLoadStatus] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(restPath);
@@ -20,6 +24,20 @@ const PageAbout = () => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(skillsPath);
+      if (response.ok) {
+        const data = await response.json();
+        setSkillsData(data);
+        setSkillsLoadStatus(true);
+      } else {
+        setSkillsLoadStatus(false);
+      }
+    };
+    fetchData();
+  }, [skillsPath]);
+
   return (
     <>
       {isLoaded ? (
@@ -30,7 +48,13 @@ const PageAbout = () => {
           </div>
           <p>Location: {restData.acf.location}</p>
           <p>{restData.acf.bio}</p>
-          <Skills />
+          {isSkillsLoaded ? (
+          <Skills 
+            skillsData={skillsData[0]}
+            />
+          ) : (
+            <p>Loading Skills...</p>
+          )}
         </>
       ) : (
         <p>Loading...</p>
