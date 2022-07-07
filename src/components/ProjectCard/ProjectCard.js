@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import ShortStack from './ShortStack';
+import Placeholder from '../coffee-wireframes.jpg';
 
 const ProjectCard = () => {
   return (
-    <article>
+    <article className='project-card-container'>
       <div className="card-img-container">
-        <img src={''} alt={'project thumbnail'} />
+        <img src={Placeholder} alt={'project thumbnail'} />
       </div>
       <div className="card-text-container">
         <h2>{'project title'}</h2>

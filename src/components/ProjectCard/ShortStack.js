@@ -2,7 +2,10 @@
 const ShortStack = () => {
     return (
         <div className='short-stack-container'>
-            <p>{"HTML CSS"}</p>
+            <ul>
+                <li>{"html"}</li>
+                <li>{"css"}</li>
+            </ul>
         </div>
     )
 }
