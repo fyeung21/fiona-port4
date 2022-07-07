@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 import Skills from '../components/Skills/Skills';
 
 const PageAbout = () => {
+  const dummyData = ['hello', 'goodbye', 'please', 'thank you'];
+
   const restPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9';
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
-
-  const skillsPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project-tax?';
-  const [skillsData, setSkillsData] = useState([]);
-  const [isSkillsLoaded, setSkillsLoadStatus] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,20 +22,6 @@ const PageAbout = () => {
     fetchData();
   }, [restPath]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(skillsPath);
-      if (response.ok) {
-        const data = await response.json();
-        setSkillsData(data);
-        setSkillsLoadStatus(true);
-      } else {
-        setSkillsLoadStatus(false);
-      }
-    };
-    fetchData();
-  }, [skillsPath]);
-
   return (
     <>
       {isLoaded ? (
@@ -48,13 +32,18 @@ const PageAbout = () => {
           </div>
           <p>Location: {restData.acf.location}</p>
           <p>{restData.acf.bio}</p>
-          {isSkillsLoaded ? (
-          <Skills 
-            skillsData={skillsData[0]}
+          {/* <Skills 
+            frontEnd={restData.acf['front-end']}
+            backEnd={restData.acf['back-end']}
+            mobile={restData.acf.mobile}
+            toolSystems={restData.acf.tools_and_systems}
+            /> */}
+            <Skills 
+            frontEnd={dummyData}
+            backEnd={dummyData}
+            mobile={''}
+            toolSystems={dummyData}
             />
-          ) : (
-            <p>Loading Skills...</p>
-          )}
         </>
       ) : (
         <p>Loading...</p>

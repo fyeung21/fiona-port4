@@ -1,55 +1,64 @@
-import { useState, useEffect } from 'react';
 
-const Skills = () => {
-    const restPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9';
-    const [restData, setData] = useState([]);
-    const [isLoaded, setLoadStatus] = useState(false);
+const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
 
-    useEffect(() => {
-        const fetchData = async () => {
-        const response = await fetch(restPath);
-        if (response.ok) {
-            const data = await response.json();
-            setData(data);
-            setLoadStatus(true);
-        } else {
-            setLoadStatus(false);
-        }
-        };
-        fetchData();
-    }, [restPath]);
-  
-    return (
-        <section className='skills-container'>
-            <h2>my tool-kit</h2>
-            <h3>{"Front-end"}</h3>
-            <ul>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-            </ul>
-            <h3>{"Back-end"}</h3>
-            <ul>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-            </ul>
-            <h3>{"Mobile"}</h3>
-            <ul>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-            </ul>
-            <h3>{"Tools/Systems"}</h3>
-            <ul>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-                <li>{"Lorem"}</li>
-            </ul>
-        </section>
-    )
-}
+  return (
+    <section className="skills-container">
+      <h2>my tool-kit</h2>
+
+      {frontEnd ? (
+        <article>
+          <h3>front-end</h3>
+          <ul>
+            {frontEnd.map((item, id) => (
+              <li key={id}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ) : (
+        ''
+      )}
+      
+      {backEnd ? (
+        <article>
+          <h3>back-end</h3>
+          <ul>
+            {backEnd.map((item, id) => (
+              <li key={id}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ) : (
+        ''
+      )}
+
+      {mobile ? (
+        <article>
+          <h3>mobile</h3>
+          <ul>
+            {mobile.map((item, id) => (
+              <li key={id}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ) : (
+        ''
+      )}
+
+      {toolSystems ? (
+        <article>
+          <h3>{'tools & systems'}</h3>
+          <ul>
+            {toolSystems.map((item, id) => (
+              <li key={id}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ) : (
+        ''
+      )}
+      
+    </section>
+  );
+};
 
 export default Skills;
