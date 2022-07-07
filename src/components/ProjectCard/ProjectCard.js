@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ShortStack from './ShortStack';
+import ProjectType from './ProjectType';
 
 const ProjectCard = ({thumbnail, alt, title, excerpt, type}) => {
   return (
@@ -14,7 +14,7 @@ const ProjectCard = ({thumbnail, alt, title, excerpt, type}) => {
             <p>
               {excerpt} ...see more
             </p>
-            <ShortStack type={type}/>
+            <ProjectType type={type}/>
           </section>
         </div>
       </Link>
