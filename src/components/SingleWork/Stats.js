@@ -1,8 +1,8 @@
 
-const Stats = ({briefText, liveLink, githubLink, platform, roles, technology}) => {
+const Stats = ({briefText, liveLink, githubLink, platforms, roles, technology}) => {
     return (
         <>
-        <section class="stats-container">
+        <section className="stats-container">
             <h2>{"Project Title"}</h2>
             <article>
                 <h3>brief</h3>
@@ -16,24 +16,24 @@ const Stats = ({briefText, liveLink, githubLink, platform, roles, technology}) =
             <article>
                 <h3>platforms</h3>
                 <ul>
-                    {platform.map((item) => (
-                        <li>{item}</li>
+                    {platforms.map((item, id) => (
+                        <li key={id}>{item}</li>
                     ))}
                 </ul>
             </article>
             <article>
                 <h3>my roles</h3>
-                {/* <ul>
-                    {roles.map((item) => (
-                        <li>{item}</li>
+                <ul>
+                    {roles.map((item, id) => (
+                        <li key={id}>{item}</li>
                     ))}
-                </ul> */}
+                </ul>
             </article>
             <article>
                 <h3>technologies</h3>
                 <ul>
-                    {technology.map((item) => (
-                        <li>{item}</li>
+                    {technology.map((item, id) => (
+                        <li key={id}>{item}</li>
                     ))}
                 </ul>
             </article>
