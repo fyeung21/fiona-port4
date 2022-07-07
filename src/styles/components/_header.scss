@@ -1,10 +1,11 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 header {
     // position: fixed;
 
     .header-container {
-        display: flex;
+        @include flexRow;
         justify-content: space-between;
         align-items: center;
         // width: 800px;

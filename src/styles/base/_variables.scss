@@ -1,25 +1,31 @@
 
 // GENERAL COLOURS
-$main-color: #f1f1f1;
-$accent-color: #5468cf;
+$fio-white: #f1f1f1;
+$fio-purple: #5468cf;
+$color__main: $fio-white;
+$color__accent: $fio-purple;
 
 // BACKGROUNDS
-$main-background: #f8f8f8;
-$gradient: linear-gradient(to right bottom, #ffffff, #eae9f7, #d3d3f0, #b9bfea, #9dabe3);
+$color__main-background: #f8f8f8;
+$color__background-gradient: linear-gradient(to right bottom, #ffffff, #eae9f7, #d3d3f0, #b9bfea, #9dabe3);
+
+// MEDIA QUERIES
+$color__card-shadow: 15px 15px 25px #d8d9dc;
 
 // FONT COLOURS
-$font-color-text: #121212;
-$font-color-invert: #f8f8f8;
-$font-color-link: $accent-color;
+$color__main-text: #121212;
+$color__invert-text: #f8f8f8;
+$color__link-text: $color__accent;
+$color__hover-text: $color__accent;
 
 // FONTS
-$font-main: 'Poppins', Arial, sans-serif;
-$font-heading: $font-main;
-$font-body: $font-main;
+$font__main: 'Poppins', Arial, sans-serif;
+$font__heading: $font__main;
+$font__body: $font__main;
 
 // FONT WEIGHTS
-$font-weight-body: 500;
-$font-weight-heading: 800;
+$font__weight-body: 500;
+$font__weight-heading: 800;
 
 // MEDIA QUERIES
 $tablet: 37.5em;

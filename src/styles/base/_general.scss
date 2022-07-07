@@ -8,30 +8,30 @@ html {
 // TYPOGRAPHY
 body {
     margin: 0;
-    background-image: $gradient;
+    background-image: $color__background-gradient;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    font-family: $font-body;
-    color: $font-color-text;
+    font-family: $font__body;
+    color: $color__main-text;
 
     a {
-        color: $font-color-text;
+        color: $color__main-text;
         text-decoration: none;
 
         &:hover,
         &:focus,
         &:active {
-            color: $accent-color;
+            color: $color__accent;
         }
     }
 }
 
 h1 {
-    font-family: $font-heading;
+    font-family: $font__heading;
 }
 
-ul{
+ul {
     list-style: none;
     padding: 0;
 }

@@ -1,18 +1,19 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .footer-section {
-    display: flex;
+    @include flexRow;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
     // position: absolute;
 
     div {
-        display: flex;
+        @include flexRow;
         // align-items: center;
 
         ul {
-            display: flex;
+            @include flexRow;
             justify-content: space-between;
             // align-items: center;
 
@@ -20,10 +21,10 @@
                 padding: 0 1rem;
 
                 a {
-                    color: $font-color-text;
+                    color: $color__main-text;
 
                     &:hover {
-                        border-bottom: 2px solid $accent-color;
+                        border-bottom: 2px solid $color__accent;
                     }
                 }
             }

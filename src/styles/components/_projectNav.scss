@@ -1,14 +1,15 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .project-nav-container {
-    display: flex;
+    @include flexRow;
     overflow-x: scroll;
     margin: 0 auto;
     // padding: 7rem 2rem 2rem;
 
     a {
         &:hover {
-            color: $font-color-text;
+            color: $color__main-text;
         }
     }
 
@@ -18,7 +19,7 @@
 
         .img-container {
             border-radius: 15px;
-            box-shadow: 15px 15px 25px #d8d9dc;
+            box-shadow: $color__card-shadow;
 
             img {
                 display: block;
