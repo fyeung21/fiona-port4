@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Skills from '../components/Skills/Skills';
+import Placeholder from '../components/coffee-wireframes.jpg';
 
 const PageAbout = () => {
   const dummyData = ['hello', 'goodbye', 'please', 'thank you'];
@@ -28,7 +29,7 @@ const PageAbout = () => {
         <>
           <h2>{restData.title.rendered}</h2>
           <div className="profile-img-container">
-            <img src={''} alt="profile img" />
+            <img src={Placeholder} alt={"profile img"} />
           </div>
           <p>Location: {restData.acf.location}</p>
           <p>{restData.acf.bio}</p>
