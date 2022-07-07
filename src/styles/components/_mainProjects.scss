@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $large-tablet) {
         grid-template-columns: 1fr 1fr;
     }
 }
