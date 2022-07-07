@@ -21,6 +21,11 @@ const ProjectNav = () => {
           alt={"Placeholder"}
           projectTitle={"Project Title"}
           />
+          <NavCard 
+          thumbnail={Placeholder}
+          alt={"Placeholder"}
+          projectTitle={"Project Title"}
+          />
       </div>
     </>
   );

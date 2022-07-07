@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const NavCard = ({thumbnail, alt, projectTitle}) => {
+const NavCard = ({ thumbnail, alt, projectTitle }) => {
   return (
     <Link to={`/work/${'page-id'}`}>
       <article className="nav-card-container">
-        <img src={thumbnail} alt={alt} />
+        <div className="img-container">
+          <img src={thumbnail} alt={alt} />
+        </div>
         <h3>{projectTitle}</h3>
       </article>
     </Link>

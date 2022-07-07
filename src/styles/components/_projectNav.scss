@@ -6,8 +6,28 @@
     margin: 0 auto;
     // padding: 7rem 2rem 2rem;
 
+    a {
+        &:hover {
+            color: $font-color-text;
+        }
+    }
+
     .nav-card-container {
         width: 350px;
         margin: 0 1rem;
+
+        .img-container {
+            border-radius: 15px;
+            box-shadow: 15px 15px 25px #d8d9dc;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+        }
     }
 }
