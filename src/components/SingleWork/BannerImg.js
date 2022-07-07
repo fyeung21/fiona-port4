@@ -2,7 +2,7 @@
 const BannerImg = () => {
     return (
         <>
-        <div class="single-hero-container">
+        <div className="single-hero-container">
             <img src={""} alt={""} />
         </div>
         </>
