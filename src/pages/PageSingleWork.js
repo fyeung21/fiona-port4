@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import ProjectNav from '../components/ProjectNav/ProjectNav';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
+import Placeholder from '../components/coffee-wireframes.jpg';
 
 const PageSingleWork = () => {
   const testData = ['hello', 'goodbye', 'please', 'thank you']
@@ -31,7 +32,10 @@ const PageSingleWork = () => {
       {isLoaded ? (
         <>
 <section className="page-single-work">
-            <BannerImg />
+            <BannerImg 
+              hero={Placeholder}
+              alt={"placeholder"}
+              />
             {/* <Stats
               briefText={restData[0].acf.brief_description}
               liveLink={restData[0].acf.live_demo.url}

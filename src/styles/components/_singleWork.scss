@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.page-single-work {
+    .single-hero-container {
+        height: 500px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
