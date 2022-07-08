@@ -5,7 +5,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
     <section className="skills-container">
       <h2>my tool-kit</h2>
 
-      {frontEnd ? (
+      {frontEnd.length !== 0 ? (
         <article>
           <h3>front-end</h3>
           <ul>
@@ -18,7 +18,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
         ''
       )}
       
-      {backEnd ? (
+      {backEnd.length !== 0 ? (
         <article>
           <h3>back-end</h3>
           <ul>
@@ -31,7 +31,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
         ''
       )}
 
-      {mobile ? (
+      {mobile.length !== 0 ? (
         <article>
           <h3>mobile</h3>
           <ul>
@@ -44,7 +44,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
         ''
       )}
 
-      {toolSystems ? (
+      {toolSystems.length !== 0 ? (
         <article>
           <h3>{'tools & systems'}</h3>
           <ul>
@@ -56,7 +56,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
       ) : (
         ''
       )}
-      
+
     </section>
   );
 };
