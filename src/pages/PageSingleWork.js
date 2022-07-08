@@ -37,6 +37,7 @@ const PageSingleWork = () => {
               alt={"placeholder"}
               />
             {/* <Stats
+              title={restData[0].title}
               briefText={restData[0].acf.brief_description}
               liveLink={restData[0].acf.live_demo.url}
               githubLink={restData[0].acf.view_github.url}
@@ -45,6 +46,7 @@ const PageSingleWork = () => {
               technology={restData[0].acf.technology}
             /> */}
             <Stats
+              title={"Project Title"}
               briefText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat."}
               liveLink={"#"}
               githubLink={"#"}

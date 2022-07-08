@@ -1,0 +1,39 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.stats-container {
+    // Project Title
+    .title-container {
+        @include flexColumn;
+
+        // CTAs
+        .cta-container {
+            @include flexColumn;
+            align-items: center;
+
+            a {
+                margin: 1rem;
+                padding: 1rem;
+                background-color: $color__accent;
+                color: $color__invert-text;
+                letter-spacing: 0.5px;
+                font-size: 1.15rem;
+                &:hover {
+                    box-shadow: 0 0 0 2px $color__accent;
+                    background-color: transparent;
+                    color: $color__main-text;
+                }
+
+                &:first-child {
+                    background-color: $color__secondary-accent;
+                    padding: 1rem 2.25rem;
+                    &:hover {
+                        box-shadow: 0 0 0 2px $color__secondary-accent;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+}
