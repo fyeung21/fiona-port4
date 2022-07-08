@@ -28,6 +28,7 @@ const MainProjects = ({ projectArr }) => {
           <section className="main-projects-container">
               {restData.map((item) => (
                 <ProjectCard
+                  slug={item.slug}
                   thumbnail={item._embedded['wp:featuredmedia'][0].source_url}
                   alt={item._embedded['wp:featuredmedia'][0].alt_text}
                   title={item.title.rendered}

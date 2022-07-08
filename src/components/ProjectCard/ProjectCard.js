@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import ProjectType from './ProjectType';
 
-const ProjectCard = ({thumbnail, alt, title, excerpt, type}) => {
+const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
   return (
     <article className="project-card-container">
-      <Link to={`/works/${'workSingle'}`}>
+      <Link to={`/works/${slug}`}>
         <div>
           <section className="card-img-container">
             <img src={thumbnail} alt={alt} />
