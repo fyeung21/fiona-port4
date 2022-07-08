@@ -25,8 +25,10 @@ const PageHome = () => {
   return (
     <>
       {isLoaded ? (
-          <>
-          {restData.acf.projects.map((item) => testArray.push(item.ID))}
+        <>
+          {restData.acf.projects.map((item) => {
+            let someArr = testArray.push(item.ID);
+          })}
           <MainProjects projectArr={testArray} />
         </>
       ) : (
