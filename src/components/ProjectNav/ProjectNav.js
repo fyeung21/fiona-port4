@@ -27,7 +27,7 @@ const ProjectNav = () => {
     <>
       {isLoaded ? (
         <>
-          <h3>more projects</h3>
+          <h2>more projects</h2>
           <div className="project-nav-container">
             <NavCard thumbnail={Placeholder} alt={'Placeholder'} projectTitle={'Project Title'} />
             <NavCard thumbnail={Placeholder} alt={'Placeholder'} projectTitle={'Project Title'} />
