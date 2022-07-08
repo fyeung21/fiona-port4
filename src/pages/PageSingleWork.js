@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
 import ProjectContent from '../components/SingleWork/ProjectContent';
-import ProjectNav from '../components/ProjectNav/ProjectNav';
+import PageHome from './PageHome';
 
 const PageSingleWork = () => {
   const { slug } = useParams();
@@ -44,7 +44,7 @@ const PageSingleWork = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
-            <ProjectNav />
+            <PageHome/>
           </section>
         </>
       ) : (
