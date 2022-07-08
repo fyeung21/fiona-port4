@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import Skills from '../components/Skills/Skills';
-import Placeholder from '../components/coffee-wireframes.jpg';
 
 const PageAbout = () => {
-  const dummyData = ['hello', 'goodbye', 'please', 'thank you'];
 
-  const restPath = 'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9?&_embed&acf_format=standard';
+  const restPath =
+    'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/9?&_embed&acf_format=standard';
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -26,26 +25,24 @@ const PageAbout = () => {
   return (
     <>
       {isLoaded ? (
-        <>
+        <section className="page-about-container">
           <h2>{restData.title.rendered}</h2>
           <div className="profile-img-container">
-            <img src={Placeholder} alt={"profile img"} />
+            <img
+              src={restData._embedded['wp:featuredmedia'][0].source_url}
+              alt={restData._embedded['wp:featuredmedia'][0].alt_text}
+            />
           </div>
-          <p>Location: {restData.acf.location}</p>
+          <p>Location: <span className='location'>{restData.acf.location}</span></p>
           <p>{restData.acf.bio}</p>
-          {/* <Skills 
+          {console.log(restData.acf['front-end'])}
+          <Skills
             frontEnd={restData.acf['front-end']}
             backEnd={restData.acf['back-end']}
             mobile={restData.acf.mobile}
             toolSystems={restData.acf.tools_and_systems}
-            /> */}
-            <Skills 
-            frontEnd={dummyData}
-            backEnd={dummyData}
-            mobile={''}
-            toolSystems={dummyData}
-            />
-        </>
+          />
+        </section>
       ) : (
         <p>Loading...</p>
       )}
