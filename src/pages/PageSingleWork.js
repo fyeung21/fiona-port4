@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
-import ProjectNav from '../components/ProjectNav/ProjectNav';
+import { useParams } from 'react-router-dom';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
+import ProjectContent from '../components/SingleWork/ProjectContent';
+import ProjectNav from '../components/ProjectNav/ProjectNav';
 
 const PageSingleWork = () => {
-
   const { slug } = useParams();
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed&t=3`;
   const [restData, setData] = useState([]);
@@ -30,10 +30,10 @@ const PageSingleWork = () => {
       {isLoaded ? (
         <>
           <section className="page-single-work">
-            <BannerImg 
+            <BannerImg
               heroSrc={restData[0]._embedded['wp:featuredmedia'][0].source_url}
               alt={restData[0]._embedded['wp:featuredmedia'][0].alt_text}
-              />
+            />
             <Stats
               title={restData[0].title.rendered}
               brief={restData[0].acf.brief}
@@ -43,6 +43,7 @@ const PageSingleWork = () => {
               roles={restData[0].acf.roles}
               technologies={restData[0].acf.technologies}
             />
+            <ProjectContent content={restData[0].acf.project_content} />
             <ProjectNav />
           </section>
         </>
