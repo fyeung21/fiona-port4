@@ -1,4 +1,4 @@
-const Stats = ({ title, briefText, liveLink, githubLink, platforms, roles, technology }) => {
+const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technologies }) => {
   return (
     <>
       <section className="stats-container">
@@ -12,7 +12,7 @@ const Stats = ({ title, briefText, liveLink, githubLink, platforms, roles, techn
         </div>
         <article>
           <h3>brief</h3>
-          <p>{briefText}</p>
+          <p>{brief}</p>
         </article>
         <article>
           <h3>platforms</h3>
@@ -33,7 +33,7 @@ const Stats = ({ title, briefText, liveLink, githubLink, platforms, roles, techn
         <article>
           <h3>technologies</h3>
           <ul>
-            {technology.map((item, id) => (
+            {technologies.map((item, id) => (
               <li key={id}>{item}</li>
             ))}
           </ul>

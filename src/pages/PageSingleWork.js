@@ -6,7 +6,6 @@ import Stats from '../components/SingleWork/Stats';
 import Placeholder from '../components/coffee-wireframes.jpg';
 
 const PageSingleWork = () => {
-  const testData = ['hello', 'goodbye', 'please', 'thank you']
 
   const { slug } = useParams();
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed`;
@@ -36,23 +35,14 @@ const PageSingleWork = () => {
               hero={Placeholder}
               alt={"placeholder"}
               />
-            {/* <Stats
-              title={restData[0].title}
-              briefText={restData[0].acf.brief_description}
+            <Stats
+              title={restData[0].title.rendered}
+              brief={restData[0].acf.brief}
               liveLink={restData[0].acf.live_demo.url}
               githubLink={restData[0].acf.view_github.url}
               platforms={restData[0].acf.platforms}
-              roles={restData[0].acf.my_roles}
-              technology={restData[0].acf.technology}
-            /> */}
-            <Stats
-              title={"Project Title"}
-              briefText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat."}
-              liveLink={"#"}
-              githubLink={"#"}
-              platforms={testData}
-              roles={testData}
-              technology={testData}
+              roles={restData[0].acf.roles}
+              technologies={restData[0].acf.technologies}
             />
             <ProjectNav />
           </section>
