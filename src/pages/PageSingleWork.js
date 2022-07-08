@@ -3,12 +3,11 @@ import {useParams} from 'react-router-dom';
 import ProjectNav from '../components/ProjectNav/ProjectNav';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
-import Placeholder from '../components/coffee-wireframes.jpg';
 
 const PageSingleWork = () => {
 
   const { slug } = useParams();
-  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed`;
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed&t=3`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -30,10 +29,10 @@ const PageSingleWork = () => {
     <>
       {isLoaded ? (
         <>
-<section className="page-single-work">
+          <section className="page-single-work">
             <BannerImg 
-              hero={Placeholder}
-              alt={"placeholder"}
+              heroSrc={restData[0]._embedded['wp:featuredmedia'][0].source_url}
+              alt={restData[0]._embedded['wp:featuredmedia'][0].alt_text}
               />
             <Stats
               title={restData[0].title.rendered}

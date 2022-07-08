@@ -1,8 +1,8 @@
 
-const BannerImg = ({ hero, alt }) => {
+const BannerImg = ({ heroSrc, alt }) => {
   return (
     <div className="single-hero-container">
-      <img src={hero} alt={alt} />
+      <img src={heroSrc} alt={alt} />
     </div>
   );
 };
