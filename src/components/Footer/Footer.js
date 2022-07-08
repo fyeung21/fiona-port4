@@ -28,7 +28,7 @@ const Footer = () => {
           <p>{restData[0].acf.footer_message}</p>
           <ul>
             <li>
-              <a href={restData[0].acf.email_link.url}>{restData[0].acf.email_link.title}</a>
+              <a href={`mailto:${restData[0].acf.email_link}`}>email</a>
             </li>
             <li>
               <a href={restData[0].acf.linkedin_link.url}>{restData[0].acf.linkedin_link.title}</a>
@@ -41,7 +41,7 @@ const Footer = () => {
       </section>
       ) : (
         <p>Loading...</p>
-      )};
+      )}
     </>
   );
 };
