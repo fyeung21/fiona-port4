@@ -25,6 +25,12 @@
                 display: block;
                 overflow: hidden;
                 border-radius: 15px;
+                filter: grayscale(100%) brightness(100%);
+
+                &:hover {
+                    filter: grayscale(0%) brightness(100%);
+                    transition: filter .08s linear;
+                }
             }
         }
     }
