@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageAbout from '../pages/PageAbout';
-import PageWork from '../pages/PageWork';
+import PageHome from '../pages/PageHome';
 import PageSingleWork from '../pages/PageSingleWork';
 import NotFoundPage from '../pages/Page404';
 import Header from '../components/Header/Header';
@@ -13,7 +13,7 @@ const AppRouter = () => {
       <div className="wrapper">
         <main>
           <Routes>
-            <Route path="/" element={<PageWork />} />
+            <Route path="/" element={<PageHome />} />
             <Route path="/about" element={<PageAbout />} />
             <Route path="/works/:slug" element={<PageSingleWork />} />
             <Route path="/*" element={<NotFoundPage />} />

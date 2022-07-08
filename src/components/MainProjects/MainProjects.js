@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ProjectCard from '../ProjectCard/ProjectCard';
-import Placeholder from '../coffee-wireframes.jpg';
 
-const MainProjects = () => {
-  const { slug } = useParams();
-  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed`;
+const MainProjects = ({ projectArr }) => {
+  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&include=${projectArr}&orderby=include&_embed&v=4`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -25,56 +23,23 @@ const MainProjects = () => {
 
   return (
     <>
-      {/* {isLoaded ? ( */}
+      {isLoaded ? (
         <>
           <section className="main-projects-container">
-            <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
-            <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
-              <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
-              <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
-              <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
-              <ProjectCard 
-              thumbnail={Placeholder}
-              alt={'placeholder'}
-              title={'Project Title'}
-              excerpt={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, augue ac facilisis mattis, dui lorem dictum libero, quis imperdiet lorem dui sit amet lorem. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum orci eros, at tempor urna accumsan imperdiet.'}
-              type={'wordpress'}
-              />
+              {restData.map((item) => (
+                <ProjectCard
+                  thumbnail={item._embedded['wp:featuredmedia'][0].source_url}
+                  alt={item._embedded['wp:featuredmedia'][0].alt_text}
+                  title={item.title.rendered}
+                  excerpt={item.project_brief}
+                  type={'wordpress'}
+                />
+              ))}
           </section>
         </>
-      {/* ) : ( */}
+      ) : (
         <p>Loading...</p>
-      {/* )} */}
+      )}
     </>
   );
 };
