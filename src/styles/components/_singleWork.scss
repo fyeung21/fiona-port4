@@ -1,7 +1,43 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .page-single-work {
     .single-hero-container {
         height: 500px;
+    }
+
+    .main-projects-container {
+        @include flexRow;
+        overflow-x: scroll;
+        margin: 0 auto;
+
+        .project-card-container {
+            div {
+                width: 350px;
+                margin: 0 1rem;
+
+                .card-img-container {
+                    border-radius: 15px;
+                    box-shadow: $color__card-shadow;
+                    
+                    img {
+                        display: block;
+                        overflow: hidden;
+                        border-radius: 15px;
+                        filter: grayscale(100%) brightness(100%);
+        
+                        &:hover {
+                            filter: grayscale(0%) brightness(100%);
+                            transition: filter .08s linear;
+                        }
+                    }
+                }
+                .card-text-container {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

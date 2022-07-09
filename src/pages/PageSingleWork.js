@@ -49,6 +49,7 @@ const PageSingleWork = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
+            <h2>more projects</h2>
             <PageHome />
           </section>
         </>
