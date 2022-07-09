@@ -28,13 +28,13 @@ const Footer = () => {
           <p>{restData[0].acf.footer_message}</p>
           <ul>
             <li>
-              <a href={`mailto:${restData[0].acf.email_link}`} title="link to email">email</a>
+              <a href={`mailto:${restData[0].acf.email_link}`} title="link to email" rel="noreferrer noopener">email</a>
             </li>
             <li>
-              <a href={restData[0].acf.linkedin_link.url} title="link to linkedIn">{restData[0].acf.linkedin_link.title}</a>
+              <a href={restData[0].acf.linkedin_link.url} title="link to linkedIn" rel="noreferrer noopener">{restData[0].acf.linkedin_link.title}</a>
             </li>
             <li>
-              <a href={restData[0].acf.github_link.url} title="link to github">{restData[0].acf.github_link.title}</a>
+              <a href={restData[0].acf.github_link.url} title="link to github" rel="noreferrer noopener">{restData[0].acf.github_link.title}</a>
             </li>
           </ul>
         </div>
