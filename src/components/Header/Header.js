@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
+    <a className="skip-link" href="#main">Skip to content</a>
       <div className="header-container">
         <div className="logo">
           <NavLink to="/">

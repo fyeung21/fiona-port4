@@ -2,24 +2,32 @@
 @use "../base/mixins" as *;
 
 header {
-    // position: fixed;
+    .skip-link {
+        left: 0;
+        padding: 4px;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+
+        &:focus {
+            transform: translateY(0%);
+            color: $color__main-text;
+        }
+    }
 
     .header-container {
         @include flexRow;
         justify-content: space-between;
         align-items: center;
-        // width: 800px;
         max-width: 1200px;
         margin: 0 1rem;
 
         @media (min-width: $tablet) {
             margin: 0 2rem;
-            // width: 1000px;
         }
 
         @media (min-width: $desktop) {
             margin: 0 auto;
-            // width: 1000px;
         }
     }
 }
