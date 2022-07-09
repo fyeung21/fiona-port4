@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter>
       <Header />
       <div className="wrapper">
         <main>
