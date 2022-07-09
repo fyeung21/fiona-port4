@@ -2,26 +2,37 @@
 @use "../base/mixins" as *;
 
 .footer-section {
-    @include flexRow;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    // position: absolute;
+    @media (min-width: $tablet) {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+    cite {
+        font-size: 0.75rem;
+    }
 
     div {
-        @include flexRow;
-        // align-items: center;
+        @media (min-width: $tablet) {
+            @include flexRow;
+        }
 
         ul {
             @include flexRow;
             justify-content: space-between;
-            // align-items: center;
+            @media (min-width: $tablet) {
+            }
 
             li {
                 padding: 0 1rem;
 
                 a {
                     color: $color__main-text;
+                    border-bottom: 2px solid $color__accent;
+
+                    @media (min-width: $tablet) {
+                        border-bottom: none;
+                    }
 
                     &:hover {
                         border-bottom: 2px solid $color__accent;
