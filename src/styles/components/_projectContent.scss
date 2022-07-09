@@ -1,0 +1,12 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page-single-work {
+    .project-content-container {
+        padding: 2rem 0 3rem;
+
+        @media (min-width: $desktop) {
+            padding: 3rem 0 5rem;
+        }
+    }
+}
