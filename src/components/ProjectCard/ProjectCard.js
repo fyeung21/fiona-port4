@@ -4,7 +4,7 @@ import ProjectType from './ProjectType';
 const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
   return (
     <article className="project-card-container">
-      <Link to={`/works/${slug}`}>
+      <Link to={`/works/${slug}`} title={`link to ${slug} project description page`}>
         <div>
           <section className="card-img-container">
             <img src={thumbnail} alt={alt} />

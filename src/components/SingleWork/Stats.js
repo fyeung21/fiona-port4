@@ -6,8 +6,8 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technolog
           <h2>{title}</h2>
           <article className="cta-container">
             {/* if statement for live site cta */}
-            <a href={liveLink}>live site</a>
-            <a href={githubLink}>view github</a>
+            <a href={liveLink} title="link to live site">live site</a>
+            <a href={githubLink} title="link to github repo">view github</a>
           </article>
         </div>
         <article>

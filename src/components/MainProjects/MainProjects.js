@@ -32,7 +32,7 @@ const MainProjects = ({ projectArr }) => {
                 thumbnail={item._embedded['wp:featuredmedia'][0].source_url}
                 alt={item._embedded['wp:featuredmedia'][0].alt_text}
                 title={item.title.rendered}
-                excerpt={item.project_brief}
+                excerpt={item.acf.project_excerpt}
                 type={item._embedded['wp:term'][0][0].name}
               />
             ))}
