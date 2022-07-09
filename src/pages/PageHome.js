@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import MainProjects from '../components/MainProjects/MainProjects';
 
 const PageHome = () => {
@@ -26,6 +27,10 @@ const PageHome = () => {
     <>
       {isLoaded ? (
         <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Home | Fiona's Portfolio Website</title>
+          </Helmet>
           {restData.acf.projects.map((item) => {
             let someArr = testArray.push(item.ID);
           })}

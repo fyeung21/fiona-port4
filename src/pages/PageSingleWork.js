@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import BannerImg from '../components/SingleWork/BannerImg';
 import Stats from '../components/SingleWork/Stats';
 import ProjectContent from '../components/SingleWork/ProjectContent';
@@ -29,6 +30,10 @@ const PageSingleWork = () => {
     <>
       {isLoaded ? (
         <>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>{restData[0].title.rendered} | Fiona's Portfolio Website</title>
+          </Helmet>
           <section className="page-single-work">
             <BannerImg
               heroSrc={restData[0]._embedded['wp:featuredmedia'][0].source_url}
@@ -44,7 +49,7 @@ const PageSingleWork = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
-            <PageHome/>
+            <PageHome />
           </section>
         </>
       ) : (
