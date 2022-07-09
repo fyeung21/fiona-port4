@@ -1,14 +1,22 @@
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const ProjectContent = ({ content }) => {
   return (
     <>
       <section className="project-content-container">
-        {content.map((item, id) => (
-            <article key={id}>
-            {item.heading !== '' ? <h3>{item.heading}</h3> : ''}
-            <section dangerouslySetInnerHTML={{ __html: item.content }}></section>
-            </article>
-        ))}
+        <Tabs>
+          <TabList>
+            {content.map((item, id) => (
+              <Tab key={id}>{item.heading}</Tab>
+            ))}
+          </TabList>
+          {content.map((item, id) => (
+            <TabPanel>
+              <section dangerouslySetInnerHTML={{ __html: item.content }}></section>
+            </TabPanel>
+          ))}
+        </Tabs>
       </section>
     </>
   );
