@@ -33,6 +33,7 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technolog
           <h3>brief</h3>
           <p>{brief}</p>
         </article>
+        <div className="flex-container">
         <article>
           <h3>platforms</h3>
           <ul>
@@ -57,6 +58,7 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technolog
             ))}
           </ul>
         </article>
+        </div>
       </section>
     </>
   );
