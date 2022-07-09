@@ -32,17 +32,20 @@ const PageAbout = () => {
           </Helmet>
           <section className="page-about-container">
             <h2>{restData.title.rendered}</h2>
-            <div className="profile-img-container">
-              <img
-                src={restData._embedded['wp:featuredmedia'][0].source_url}
-                alt={restData._embedded['wp:featuredmedia'][0].alt_text}
-              />
-            </div>
-            <p>
-              Location: <span className="location">{restData.acf.location}</span>
-            </p>
-            <p>{restData.acf.bio}</p>
-            {console.log(restData.acf['front-end'])}
+            <article className='flex-container'>
+              <div className="profile-img-container">
+                <img
+                  src={restData._embedded['wp:featuredmedia'][0].source_url}
+                  alt={restData._embedded['wp:featuredmedia'][0].alt_text}
+                />
+              </div>
+              <div>
+                <p>
+                  Location: <span className="location">{restData.acf.location}</span>
+                </p>
+                <p>{restData.acf.bio}</p>
+              </div>
+            </article>
             <Skills
               frontEnd={restData.acf['front-end']}
               backEnd={restData.acf['back-end']}

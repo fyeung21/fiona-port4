@@ -2,6 +2,36 @@
 @use "../base/mixins" as *;
 
 .page-about-container {
+    .flex-container {
+        @media (min-width: $desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: end;
+        }
+    }
+
+    .profile-img-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        padding-bottom: 1.5rem;
+
+        @media (min-width: $tablet) {
+            width: 300px;
+            height: 300px;
+        }
+        @media (min-width: $desktop) {
+            width: 400px;
+            height: 400px;
+            order: 1;
+            margin: 0;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
     .location {
         font-weight: 600;
     }
@@ -12,10 +42,9 @@
                 @include flexRow;
                 justify-content: space-between;
                 width: 70%;
-
-                @media (min-width: $desktop) {
-                    width: 60%;
-                }
+            }
+            @media (min-width: $desktop) {
+                width: 60%;
             }
         }
     }
