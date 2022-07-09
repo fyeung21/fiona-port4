@@ -3,7 +3,11 @@
 
 .page-single-work {
     .single-hero-container {
-        height: 500px;
+        height: 300px;
+        
+        @media (min-width: $tablet) {
+            height: 500px;
+        }
     }
 
     .main-projects-container {
