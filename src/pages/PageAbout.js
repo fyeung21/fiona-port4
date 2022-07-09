@@ -27,6 +27,7 @@ const PageAbout = () => {
       {isLoaded ? (
         <section className="page-about-container">
           <h2>{restData.title.rendered}</h2>
+          <p>test</p>
           <div className="profile-img-container">
             <img
               src={restData._embedded['wp:featuredmedia'][0].source_url}
