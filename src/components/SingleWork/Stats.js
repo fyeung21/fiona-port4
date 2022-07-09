@@ -5,9 +5,28 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technolog
         <div className="title-container">
           <h2>{title}</h2>
           <article className="cta-container">
-            {/* if statement for live site cta */}
-            <a href={liveLink} title="link to live site" rel="noreferrer noopener" target="_blank">live site</a>
-            <a href={githubLink} title="link to github repo" rel="noreferrer noopener" target="_blank">view github</a>
+            {liveLink !== '' ? (
+              <a
+                href={liveLink}
+                title="link to live site"
+                rel="noreferrer noopener"
+                target="_blank">
+                live site
+              </a>
+            ) : (
+              ''
+            )}
+            {githubLink !== '' ? (
+              <a
+                href={githubLink}
+                title="link to github repo"
+                rel="noreferrer noopener"
+                target="_blank">
+                view github
+              </a>
+            ) : (
+              ''
+            )}
           </article>
         </div>
         <article>
