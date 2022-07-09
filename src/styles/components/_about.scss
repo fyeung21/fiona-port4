@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page-about-container {
+    .location {
+        font-weight: 600;
+    }
+
+    .skills-container {
+        div {
+            @media (min-width: $tablet) {
+                @include flexRow;
+                justify-content: space-between;
+                width: 70%;
+
+                @media (min-width: $desktop) {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

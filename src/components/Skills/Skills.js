@@ -5,6 +5,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
     <section className="skills-container">
       <h2>my tool-kit</h2>
 
+      <div className="flex-container">
       {frontEnd.length !== 0 ? (
         <article>
           <h3>front-end</h3>
@@ -56,6 +57,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
       ) : (
         ''
       )}
+      </div>
 
     </section>
   );
