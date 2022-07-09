@@ -12,7 +12,7 @@ const ProjectContent = ({ content }) => {
             ))}
           </TabList>
           {content.map((item, id) => (
-            <TabPanel>
+            <TabPanel key={id}>
               <section dangerouslySetInnerHTML={{ __html: item.content }}></section>
             </TabPanel>
           ))}
