@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import AOS from 'aos';
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 
 const MainProjects = ({ projectArr }) => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&include=${projectArr}&orderby=include&_embed&v=4`;
@@ -24,7 +24,7 @@ const MainProjects = ({ projectArr }) => {
 
   useEffect(() => {
     AOS.init({
-      duration : 2000
+      duration: 2000,
     });
   }, []);
 
@@ -32,7 +32,11 @@ const MainProjects = ({ projectArr }) => {
     <>
       {isLoaded ? (
         <>
-          <section className="main-projects-container" data-aos="fade-left">
+          <section
+            className="main-projects-container"
+            data-aos="fade-right"
+            data-aos-easing="ease-in"
+            data-aos-duration="1000">
             {restData.map((item, id) => (
               <ProjectCard
                 key={id}
