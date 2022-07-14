@@ -28,19 +28,22 @@
                 color: $color__invert-text;
                 letter-spacing: 0.5px;
                 font-size: 1.15rem;
-                &:hover {
-                    box-shadow: 0 0 0 2px $color__accent;
-                    background-color: transparent;
-                    color: $color__main-text;
+                transition: all .3s linear;
+
+                &:hover,
+                &:focus {
+                    box-shadow: $color__button-hover-shadow;
+                    transform: translateY(-0.25em);
+                    transition: all .3s linear;
                 }
 
                 &:first-child {
                     background-color: $color__secondary-accent;
                     padding: 1rem 2.25rem;
-                    &:hover {
-                        box-shadow: 0 0 0 2px $color__secondary-accent;
-                        background-color: transparent;
-                    }
+                    // &:hover {
+                    //     box-shadow: 0 0 0 2px $color__secondary-accent;
+                    //     background-color: transparent;
+                    // }
                 }
             }
         }

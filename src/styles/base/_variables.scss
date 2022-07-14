@@ -11,8 +11,10 @@ $color__secondary-accent: $fio-teal;
 $color__main-background: #f8f8f8;
 $color__background-gradient: linear-gradient(to right bottom, #ffffff, #eae9f7, #d3d3f0, #b9bfea, #9dabe3);
 
-// MEDIA QUERIES
+// OTHER COLORS
 $color__card-shadow: 15px 15px 25px #d8d9dc;
+// $color__shadow: gray;
+$color__button-hover-shadow: 0 0.75em 0.75em -0.4em gray;
 
 // FONT COLOURS
 $color__main-text: #121212;
