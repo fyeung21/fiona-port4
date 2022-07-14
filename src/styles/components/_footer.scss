@@ -20,8 +20,6 @@
         ul {
             @include flexRow;
             justify-content: space-between;
-            @media (min-width: $tablet) {
-            }
 
             li {
                 padding: 0 1rem;
@@ -30,10 +28,10 @@
                     color: $color__main-text;
                     border-bottom: 2px solid $color__accent;
 
-                    @media (min-width: $tablet) {
+                    @include tabletQuery {
                         border-bottom: none;
                     }
-
+                    
                     &:hover {
                         border-bottom: 2px solid $color__accent;
                     }

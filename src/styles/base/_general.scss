@@ -51,11 +51,11 @@ img {
     @include flexColumn;
     min-height: 100vh;
 
-    @media (min-width: $tablet) {
+    @include tabletQuery {
         margin: 2rem;
     }
 
-    @media (min-width: $desktop) {
+    @include desktopQuery {
         margin: 0 auto;
     }
 }

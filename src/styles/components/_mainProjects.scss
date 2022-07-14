@@ -1,11 +1,12 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .main-projects-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
 
-    @media (min-width: $large-tablet) {
+    @include largeTabletQuery {
         grid-template-columns: 1fr 1fr;
     }
 }

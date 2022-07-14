@@ -5,7 +5,7 @@
     .single-hero-container {
         height: 300px;
         
-        @media (min-width: $tablet) {
+        @include tabletQuery {
             height: 500px;
         }
     }
