@@ -32,10 +32,11 @@
                         overflow: hidden;
                         border-radius: 15px;
                         filter: grayscale(100%) brightness(100%);
+                        transition: filter .3s linear;
         
                         &:hover {
                             filter: grayscale(0%) brightness(100%);
-                            transition: filter .08s linear;
+                            transition: filter .3s linear;
                         }
                     }
                 }
