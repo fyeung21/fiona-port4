@@ -1,0 +1,19 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+nav {
+    ul {
+        @include flexRow;
+        justify-content: space-between;
+
+        li {
+            a {
+                padding: 1rem;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
