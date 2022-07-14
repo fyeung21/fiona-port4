@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-    <a className="skip-link" href="#main">Skip to content</a>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <div className="header-container">
         <div className="logo">
           <NavLink to="/">
@@ -11,7 +13,18 @@ const Header = () => {
           </NavLink>
         </div>
         <nav>
-          <NavLink to="/about" title="link to about me">about me</NavLink>
+          <ul>
+            <li>
+              <NavLink to="/" title="navigate to works page">
+                works
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" title="navigate to about me page">
+                about
+              </NavLink>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
