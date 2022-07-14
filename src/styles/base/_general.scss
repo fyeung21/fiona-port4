@@ -10,11 +10,11 @@ html {
 body {
     margin: 0;
     background-image: $color__background-gradient;
-    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     font-family: $font__body;
     color: $color__main-text;
+    background-attachment: fixed;
 
     a {
         color: $color__main-text;
