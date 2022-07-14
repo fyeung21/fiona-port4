@@ -16,7 +16,7 @@ const Header = () => {
           <ul>
             <li>
               <NavLink to="/" title="navigate to works page">
-                works
+                projects
               </NavLink>
             </li>
             <li>

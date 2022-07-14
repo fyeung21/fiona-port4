@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import BannerImg from '../components/SingleWork/BannerImg';
-import Stats from '../components/SingleWork/Stats';
-import ProjectContent from '../components/SingleWork/ProjectContent';
+import BannerImg from '../components/SingleProject/BannerImg';
+import Stats from '../components/SingleProject/Stats';
+import ProjectContent from '../components/SingleProject/ProjectContent';
 import PageHome from './PageHome';
 
-const PageSingleWork = () => {
+const PageSingleProject = () => {
   const { slug } = useParams();
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&slug=${slug}&_embed&t=3`;
   const [restData, setData] = useState([]);
@@ -60,4 +60,4 @@ const PageSingleWork = () => {
   );
 };
 
-export default PageSingleWork;
+export default PageSingleProject;
