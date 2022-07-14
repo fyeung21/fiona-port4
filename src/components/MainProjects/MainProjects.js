@@ -41,7 +41,7 @@ const MainProjects = ({ projectArr }) => {
                 alt={item._embedded['wp:featuredmedia'][0].alt_text}
                 title={item.title.rendered}
                 excerpt={item.acf.project_excerpt}
-                type={item._embedded['wp:term'][0][0].name}
+                type={item._embedded['wp:term'][0]}
               />
             ))}
           </section>

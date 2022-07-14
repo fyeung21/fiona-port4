@@ -2,7 +2,11 @@
 const ProjectType = ({ type }) => {
   return (
     <div className="project-type-container">
-        <p>{type}</p>
+      <ul>
+        {type.map((item, id) => (
+          <li key={id}>{item.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
