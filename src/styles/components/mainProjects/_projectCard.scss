@@ -1,4 +1,5 @@
 @use "../../base/variables" as *;
+@use "../../base/mixins" as *;
 
 .project-card-container {
     max-width: 500px;
@@ -30,8 +31,17 @@
         }
     }
     .project-type-container {
-        p {
-            text-align: right;
+        ul {
+            @include flexRow;
+            justify-content: flex-end;
+
+            li {
+                margin-left: 1rem;
+
+                &:last-child() {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
