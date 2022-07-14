@@ -13,6 +13,7 @@
     .card-img-container {
         border-radius: 15px;
         box-shadow: $color__card-shadow;
+        aspect-ratio: 3/2;
 
         img {
             display: block;

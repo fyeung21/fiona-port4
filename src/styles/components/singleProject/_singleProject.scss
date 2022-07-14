@@ -3,10 +3,11 @@
 
 .page-single-work {
     .single-hero-container {
-        height: 300px;
-        
-        @include tabletQuery {
-            height: 500px;
+        width: 100%;
+        aspect-ratio: 3/2;
+
+        @include largeTabletQuery {
+            aspect-ratio: 4/2;
         }
     }
 
@@ -23,6 +24,8 @@
                 .card-img-container {
                     border-radius: 15px;
                     box-shadow: $color__card-shadow;
+                    width: 100%;
+                    aspect-ratio: 3/2;
                     
                     img {
                         display: block;
