@@ -15,6 +15,7 @@
         @include flexRow;
         overflow-x: scroll;
         margin: 0 auto;
+        padding: 2rem 0;
 
         .project-card-container {
             div {
@@ -32,11 +33,13 @@
                         overflow: hidden;
                         border-radius: 15px;
                         filter: grayscale(100%) brightness(100%);
-                        transition: filter .3s linear;
+                        transition: all .3s linear;
         
                         &:hover {
                             filter: grayscale(0%) brightness(100%);
-                            transition: filter .3s linear;
+                            box-shadow: $color__button-hover-shadow;
+                            transform: translateY(-0.25em);
+                            transition: all .3s linear;
                         }
                     }
                 }

@@ -14,6 +14,14 @@
         border-radius: 15px;
         box-shadow: $color__card-shadow;
         aspect-ratio: 3/2;
+        transition: all 0.3s linear;
+
+        &:hover,
+        &:focus {
+            box-shadow: $color__button-hover-shadow;
+            transform: translateY(-0.25em);
+            transition: all 0.3s linear;
+        }
 
         img {
             display: block;
