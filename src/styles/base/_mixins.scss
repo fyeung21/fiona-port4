@@ -11,3 +11,20 @@
     flex-direction: column;
 }
 
+// MEDIA QUERIES
+
+@mixin mobileLargeQuery { 
+    @media (min-width: 28em) { @content; } // 448px
+}
+@mixin tabletQuery {
+    @media (min-width: 37.5em) { @content; } // 600px
+}
+@mixin largeTabletQuery {
+    @media (min-width: 48em) { @content; } // 768px
+}
+@mixin medScreenQuery {
+	@media (min-width: 54em) { @content; } // 864px
+}
+@mixin desktopQuery {
+    @media (min-width: 64em) { @content; } // 1024px
+}
