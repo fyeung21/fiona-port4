@@ -8,21 +8,21 @@
 // COMPONENTS
 
 /* Header */
-@use './components/eader/header';
-@use './components/eader/navigation';
+@use './components/header/header';
+@use './components/header/navigation';
 
 /* Footer */
-@use './components/ooter/footer';
+@use './components/footer/footer';
 
-/* Home Page */
+/* Main Projects Page */
 @use './components/mainProjects/mainProjects';
 @use './components/mainProjects/projectCard';
 
 /* About Page */
 @use './components/about/about';
 
-/* Single Work */
-@use './components/ingleWork/singleWork';
-@use './components/ingleWork/projectNav';
-@use './components/ingleWork/stats';
-@use './components/ingleWork/projectContent';
+/* Single Project */
+@use './components/singleProject/singleProject';
+@use './components/singleProject/projectNav';
+@use './components/singleProject/stats';
+@use './components/singleProject/projectContent';
