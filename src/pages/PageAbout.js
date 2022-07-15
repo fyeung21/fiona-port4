@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Skills from '../components/Skills/Skills';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const PageAbout = () => {
   const restPath =

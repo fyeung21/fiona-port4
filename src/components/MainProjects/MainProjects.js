@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const MainProjects = ({ projectArr }) => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/fio-project?acf_format=standard&include=${projectArr}&orderby=include&_embed&v=4`;
