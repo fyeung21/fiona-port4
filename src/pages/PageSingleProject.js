@@ -5,6 +5,8 @@ import BannerImg from '../components/SingleProject/BannerImg';
 import Stats from '../components/SingleProject/Stats';
 import ProjectContent from '../components/SingleProject/ProjectContent';
 import PageHome from './PageHome';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PageSingleProject = () => {
   const { slug } = useParams();
@@ -26,6 +28,14 @@ const PageSingleProject = () => {
     fetchData();
   }, [restPath]);
 
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
+
   return (
     <>
       {isLoaded ? (
@@ -34,7 +44,11 @@ const PageSingleProject = () => {
             <meta charSet="utf-8" />
             <title>{restData[0].title.rendered} | Fiona's Portfolio Website</title>
           </Helmet>
-          <section className="page-single-work">
+          <section
+            className="page-single-work"
+            data-aos="fade-up"
+            data-aos-easing="ease-in"
+            data-aos-duration="1000">
             <BannerImg
               heroSrc={restData[0]._embedded['wp:featuredmedia'][0].source_url}
               alt={restData[0]._embedded['wp:featuredmedia'][0].alt_text}
