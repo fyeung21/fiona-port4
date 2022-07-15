@@ -15,7 +15,6 @@
 
             .tab-list {
                 @include flexRow;
-                overflow-x: scroll;
                 margin-bottom: 2rem;
 
                 .react-tabs__tab {
