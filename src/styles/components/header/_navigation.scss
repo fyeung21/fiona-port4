@@ -7,11 +7,22 @@ nav {
         justify-content: space-between;
 
         li {
+            transition: all 0.3s ease-out;
+
+            &:hover,
+            &:focus {
+                    transform: translateY(-0.25em);
+                    transition: all 0.3s ease-out; 
+                }
+
             a {
                 padding: 1rem;
+                transition: all 0.3s ease-out;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     font-weight: 600;
+                    transition: all 0.3s ease-out;
                 }
             }
         }
