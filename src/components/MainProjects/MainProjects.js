@@ -34,7 +34,7 @@ const MainProjects = ({ projectArr }) => {
         <>
           <section
             className="main-projects-container"
-            data-aos="fade-right"
+            data-aos="fade-in"
             data-aos-easing="ease-in"
             data-aos-duration="1000">
             {restData.map((item, id) => (

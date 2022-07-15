@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Skills from '../components/Skills/Skills';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PageAbout = () => {
   const restPath =
@@ -22,6 +24,12 @@ const PageAbout = () => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <>
       {isLoaded ? (
@@ -30,9 +38,13 @@ const PageAbout = () => {
             <meta charSet="utf-8" />
             <title>About Me | Fiona's Portfolio Website</title>
           </Helmet>
-          <section className="page-about-container">
+          <section
+            className="page-about-container"
+            data-aos="fade-in"
+            data-aos-easing="ease-in"
+            data-aos-duration="1000">
             <h2>{restData.title.rendered}</h2>
-            <article className='flex-container'>
+            <article className="flex-container">
               <div className="profile-img-container">
                 <img
                   src={restData._embedded['wp:featuredmedia'][0].source_url}
