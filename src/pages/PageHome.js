@@ -27,10 +27,11 @@ const PageHome = () => {
     <>
       {isLoaded ? (
         <>
-        <Helmet>
+          <Helmet>
             <meta charSet="utf-8" />
             <title>Home | Fiona's Portfolio Website</title>
           </Helmet>
+          <p className="welcome-message">{restData.acf.welcome_message}</p>
           {restData.acf.projects.map((item) => {
             let someArr = testArray.push(item.ID);
           })}

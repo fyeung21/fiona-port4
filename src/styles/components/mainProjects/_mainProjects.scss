@@ -9,4 +9,10 @@
     @include largeTabletQuery {
         grid-template-columns: 1fr 1fr;
     }
+
+}
+
+.welcome-message {
+    max-width: 800px;
+    margin: 0 auto 4rem;
 }
