@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import MainProjects from '../components/MainProjects/MainProjects';
 import AOS from 'aos';
+import ParticleEffect from '../components/ParticleEffect/ParticleEffect';
 
 const PageHome = () => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/31?&_embed&acf_format=standard`;
@@ -49,6 +50,7 @@ const PageHome = () => {
             let someArr = testArray.push(item.ID);
           })}
           <MainProjects projectArr={testArray} />
+          <ParticleEffect/>
         </>
       ) : (
         <p>Loading...</p>
