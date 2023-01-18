@@ -1,7 +1,7 @@
 @use "../../base/variables" as *;
 @use "../../base/mixins" as *;
 
-.footer-section {
+footer {
     @include tabletQuery {
         @include flexRow;
         justify-content: space-between;

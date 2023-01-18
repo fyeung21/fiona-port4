@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <>
     {isLoaded ? (
-      <section className="footer-section">
+      <footer>
         <cite>&copy; {restData[0].acf.copyright_year} Fiona Yeung</cite>
         <div>
           <p>{restData[0].acf.footer_message}</p>
@@ -38,7 +38,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </footer>
       ) : (
         <p>Loading...</p>
       )}
