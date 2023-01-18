@@ -2,7 +2,7 @@
 @use "../../base/mixins" as *;
 
 .footer-section {
-    @media (min-width: $tablet) {
+    @include tabletQuery {
         @include flexRow;
         justify-content: space-between;
         align-items: center;
@@ -13,7 +13,7 @@
     }
 
     div {
-        @media (min-width: $tablet) {
+        @include tabletQuery {
             @include flexRow;
         }
 
