@@ -5,6 +5,7 @@ import PageSingleProject from '../pages/PageSingleProject';
 import NotFoundPage from '../pages/Page404';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ParticleEffect from '../components/ParticleEffect/ParticleEffect';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           </Routes>
         </main>
         <Footer />
+        <ParticleEffect/>
       </div>
     </BrowserRouter>
   );
