@@ -1,7 +1,7 @@
 @use "../../base/variables" as *;
 @use "../../base/mixins" as *;
 
-.page-single-work {
+.page-single-project {
     padding-top: 6rem;
     height: 100vh;
     overflow-y: scroll;
@@ -65,7 +65,7 @@
 }
 
 // Hide scroll bar for Safari Browser
-.page-single-work::-webkit-scrollbar { // WebKit
+.page-single-project::-webkit-scrollbar { // WebKit
     width: 0;
     height: 0;
 }
