@@ -2,6 +2,11 @@
 @use "../../base/mixins" as *;
 
 .stats-container {
+    @include largeTabletQuery {
+        width: 860px;
+        margin: 0 auto;
+    }
+
     // Project Title
     .title-container {
         @include flexColumn;
@@ -10,49 +15,90 @@
             @include flexRow;
             justify-content: space-between;
             align-items: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    // Project Summary
+    .summary-flex-container {
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        // CTAs
-        .cta-container {
-            @include flexColumn;
-            align-items: center;
-
+        // For Brief and CTAs
+        .primary-summary-container {
             @include largeTabletQuery {
                 @include flexRow;
+                justify-content: space-between;
             }
 
-            a {
-                margin: 1rem;
-                padding: 1rem;
-                background-color: $color__accent;
-                color: $color__invert-text;
-                letter-spacing: 0.5px;
-                font-size: 1.15rem;
-                transition: all .3s linear;
+            .brief-container {
+                @include largeTabletQuery {
+                    width: 70%;
+                }
+            }
 
-                &:hover,
-                &:focus {
-                    box-shadow: $color__button-hover-shadow;
-                    transform: translateY(-0.25em);
-                    transition: all .3s linear;
+            // CTAs
+            .cta-container {
+                @include flexColumn;
+                align-items: center;
+
+                a {
+                    margin: 1rem 1rem 1rem 0;
+                    padding: 1rem;
+                    background-color: $color__accent;
+                    color: $color__invert-text;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    transition: all 0.3s linear;
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: $color__button-hover-shadow;
+                        transform: translateY(-0.25em);
+                        transition: all 0.3s linear;
+                    }
+
+                    &:first-child {
+                        background-color: $color__secondary-accent;
+                        padding: 1rem 2.25rem;
+                    }
+                    &:nth-child(2) {
+                        padding: 1rem 1.25rem;
+                    }
+                }
+            }
+        }
+
+        // For Platforms and Technologies
+        .secondary-summary-container {
+            @include largeTabletQuery {
+                @include flexRow;
+                margin: 2rem auto;
+            }
+
+            article {
+                @include largeTabletQuery {
+                    margin-right: 4rem;
+                }
+            }
+
+            ul {
+                @include largeTabletQuery {
+                    @include flexRow;
                 }
 
-                &:first-child {
-                    background-color: $color__secondary-accent;
-                    padding: 1rem 2.25rem;
-                    // &:hover {
-                    //     box-shadow: 0 0 0 2px $color__secondary-accent;
-                    //     background-color: transparent;
-                    // }
+                li {
+                    @include largeTabletQuery {
+                        margin-right: 1rem;
+                    }
                 }
             }
         }
     }
-    .flex-container {
-        @include tabletQuery {
-            @include flexRow;
-            justify-content: space-between;
-            width: 70%;
-        }
+
+    .my-roles {
+        display: none;
     }
 }
