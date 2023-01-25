@@ -38,7 +38,7 @@ const PageAbout = () => {
             <title>About Me | Fiona's Portfolio Website</title>
           </Helmet>
           <section
-            className="page-about-container"
+            className="page-about"
             data-aos="fade-in"
             data-aos-easing="ease-in"
             data-aos-duration="1000">

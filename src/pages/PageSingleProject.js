@@ -44,7 +44,7 @@ const PageSingleProject = () => {
             <title>{restData[0].title.rendered} | Fiona's Portfolio Website</title>
           </Helmet>
           <section
-            className="page-single-work"
+            className="page-single-project"
             data-aos="fade-up"
             data-aos-easing="ease-in"
             data-aos-duration="1000">
