@@ -38,6 +38,7 @@ const PageHome = () => {
             <meta charSet="utf-8" />
             <title>Home | Fiona's Portfolio Website</title>
           </Helmet>
+          <section className="page-home">
           <p
             className="welcome-message"
             data-aos="fade-in"
@@ -49,6 +50,7 @@ const PageHome = () => {
             let someArr = testArray.push(item.ID);
           })}
           <MainProjects projectArr={testArray} />
+          </section>
         </>
       ) : (
         <p>Loading...</p>

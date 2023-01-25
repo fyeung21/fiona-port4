@@ -2,6 +2,15 @@
 @use "../../base/mixins" as *;
 
 .page-single-work {
+    padding-top: 6rem;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 60;
+    
+    // Hide Scroll Bar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer 10+
+
     .project-content-container {
         padding: 2rem 0 3rem;
 
@@ -53,4 +62,10 @@
             margin: 0 auto;
         }
     }
+}
+
+// Hide scroll bar for Safari Browser
+.page-single-work::-webkit-scrollbar { // WebKit
+    width: 0;
+    height: 0;
 }

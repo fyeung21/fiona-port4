@@ -1,18 +1,35 @@
 @use "../../base/variables" as *;
 @use "../../base/mixins" as *;
 
-.main-projects-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+.page-home {
+    padding-top: 6rem;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 60;
+    
+    // Hide Scroll Bar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer 10+
 
-    @include largeTabletQuery {
-        grid-template-columns: 1fr 1fr;
+    .main-projects-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    
+        @include largeTabletQuery {
+            grid-template-columns: 1fr 1fr;
+        }
+    
     }
-
+    
+    .welcome-message {
+        max-width: 800px;
+        margin: 0 auto 4rem;
+    }
 }
 
-.welcome-message {
-    max-width: 800px;
-    margin: 0 auto 4rem;
+// Hide scroll bar for Safari Browser
+.page-home::-webkit-scrollbar { // WebKit
+    width: 0;
+    height: 0;
 }

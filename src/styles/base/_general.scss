@@ -62,16 +62,4 @@ img {
 
 main {
     flex-grow: 1;
-    padding-top: 6rem;
-    height: 100vh;
-    overflow-y: scroll;
-    
-    // Hide Scroll Bar
-    scrollbar-width: none; // Firefox
-    -ms-overflow-style: none; // Internet Explorer 10+
-}
-
-main::-webkit-scrollbar { // WebKit
-    width: 0;
-    height: 0;
 }

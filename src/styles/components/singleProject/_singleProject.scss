@@ -14,41 +14,49 @@
         display: none;
     }
 
-    .main-projects-container {
-        @include flexRow;
-        overflow-x: scroll;
-        margin: 0 auto;
-        padding: 2rem 0;
+    // Undo Home Page's content scroll with fixed bkg for navigation
+    .page-home {
+        padding-top: 0;
+        height: fit-content;
+        overflow-y: visible;
+        z-index: 60;
 
-        .project-card-container {
-            div {
-                width: 350px;
-                margin: 0 1rem;
+        // Project Navigation
+        .main-projects-container { 
+            @include flexRow;
+            overflow-x: scroll;
+            margin: 0 auto;
+            padding: 2rem 0;
 
-                .card-img-container {
-                    border-radius: 15px;
-                    box-shadow: $color__card-shadow;
-                    width: 100%;
-                    aspect-ratio: 3/2;
-                    
-                    img {
-                        display: block;
-                        overflow: hidden;
+            .project-card-container {
+                div {
+                    width: 350px;
+                    margin: 0 1rem;
+                    filter: grayscale(100%) brightness(100%);
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        filter: grayscale(0%) brightness(100%);
+                        transform: translateY(-0.25em);
+                        transition: all 0.3s linear;
+                    }
+
+                    .card-img-container {
                         border-radius: 15px;
-                        filter: grayscale(100%) brightness(100%);
-                        transition: all .3s linear;
-        
-                        &:hover {
-                            filter: grayscale(0%) brightness(100%);
-                            box-shadow: $color__button-hover-shadow;
-                            transform: translateY(-0.25em);
-                            transition: all .3s linear;
+                        box-shadow: $color__card-shadow;
+                        width: 100%;
+                        aspect-ratio: 3/2;
+
+                        img {
+                            display: block;
+                            overflow: hidden;
+                            border-radius: 15px;
                         }
                     }
-                }
-                .card-text-container {
-                    p {
-                        display: none;
+                    .card-text-container {
+                        p {
+                            display: none;
+                        }
                     }
                 }
             }
