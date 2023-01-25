@@ -28,6 +28,9 @@
 
         // For Brief and CTAs
         .primary-summary-container {
+            @include flexColumn;
+            flex-direction: column-reverse;
+            
             @include largeTabletQuery {
                 @include flexRow;
                 justify-content: space-between;
