@@ -1,7 +1,7 @@
 
 const ParticleEffect = () => {
   return (
-    <ul class="bg-bubbles">
+    <ul className="bg-bubbles">
       <li></li>
       <li></li>
       <li></li>
