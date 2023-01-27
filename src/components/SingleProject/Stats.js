@@ -2,15 +2,12 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, roles, technolog
   return (
     <>
       <section className="stats-container">
-        <div className="title-container">
-          <h2>{title}</h2>
-        </div>
         <div className="summary-flex-container">
           <section className="primary-summary-container">
-            <article className="brief-container">
-              <h3>brief</h3>
+              <article className="title-container">
+                <h2>{title}</h2>
               <p>{brief}</p>
-            </article>
+              </article>
             <article className="cta-container">
               {liveLink !== '' ? (
                 <a

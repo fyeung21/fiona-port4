@@ -7,18 +7,6 @@
         margin: 0 auto;
     }
 
-    // Project Title
-    .title-container {
-        @include flexColumn;
-
-        @include largeTabletQuery {
-            @include flexRow;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.5rem;
-        }
-    }
-
     // Project Summary
     .summary-flex-container {
         h3 {
@@ -26,19 +14,24 @@
             letter-spacing: 1px;
         }
 
-        // For Brief and CTAs
+        // For Project Title, Brief, and CTAs
         .primary-summary-container {
             @include flexColumn;
-            flex-direction: column-reverse;
-            
+
             @include largeTabletQuery {
                 @include flexRow;
                 justify-content: space-between;
+                margin: 3rem auto;
             }
 
-            .brief-container {
+            //Project Title
+            .title-container {
                 @include largeTabletQuery {
-                    width: 70%;
+                    width: 75%;
+                }
+                h2 {
+                    font-size: 2rem;
+                    margin: 0;
                 }
             }
 
@@ -66,9 +59,17 @@
                     &:first-child {
                         background-color: $color__secondary-accent;
                         padding: 1rem 2.25rem;
+
+                        @include largeTabletQuery {
+                            margin: 0 0 2rem;
+                        }
                     }
                     &:nth-child(2) {
                         padding: 1rem 1.25rem;
+
+                        @include largeTabletQuery {
+                            margin: 0;
+                        }
                     }
                 }
             }
