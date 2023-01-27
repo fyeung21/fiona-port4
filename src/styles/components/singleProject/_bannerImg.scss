@@ -1,0 +1,15 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+.page-single-project {
+
+    //Banner Img
+    .single-hero-container {
+        width: 100%;
+        aspect-ratio: 3/2;
+
+        @include largeTabletQuery {
+            aspect-ratio: 4/2;
+        }
+    }
+}

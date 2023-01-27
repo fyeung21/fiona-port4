@@ -27,13 +27,11 @@ const PageSingleProject = () => {
     fetchData();
   }, [restPath]);
 
-
   useEffect(() => {
     AOS.init({
       duration: 2000,
     });
   }, []);
-
 
   return (
     <>
@@ -62,7 +60,7 @@ const PageSingleProject = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
-            <h2>more projects</h2>
+            <h2 className="project-nav-heading">more projects</h2>
             <PageHome />
           </section>
         </>
