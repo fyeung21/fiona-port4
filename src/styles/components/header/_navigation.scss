@@ -8,12 +8,20 @@ nav {
 
         li {
             transition: all 0.3s ease-out;
+            text-transform: capitalize;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            backdrop-filter: blur(3px);
 
             &:hover,
             &:focus {
-                    transform: translateY(-0.25em);
-                    transition: all 0.3s ease-out; 
-                }
+                transform: translateY(-0.25em);
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                margin-right: 0.5rem;
+            }
 
             a {
                 padding: 1rem;
