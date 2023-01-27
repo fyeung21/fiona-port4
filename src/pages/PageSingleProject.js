@@ -56,7 +56,6 @@ const PageSingleProject = () => {
               liveLink={restData[0].acf.live_demo.url}
               githubLink={restData[0].acf.view_github.url}
               platforms={restData[0].acf.platforms}
-              roles={restData[0].acf.roles}
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
