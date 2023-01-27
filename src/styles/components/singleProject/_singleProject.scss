@@ -22,38 +22,31 @@
         z-index: 60;
 
         // Project Navigation
-        .main-projects-container { 
+        .main-projects-container {
             @include flexRow;
             overflow-x: scroll;
             margin: 0 auto;
             padding: 2rem 0;
 
             .project-card-container {
+                padding: 1.25rem 1rem 0 1rem;
                 div {
+                    @include largeTabletQuery {
+                        filter: grayscale(100%) brightness(100%);
+                    }
                     width: 350px;
-                    margin: 0 1rem;
-                    filter: grayscale(100%) brightness(100%);
                     transition: all 0.3s linear;
 
                     &:hover {
-                        filter: grayscale(0%) brightness(100%);
+                        @include largeTabletQuery {
+                            filter: grayscale(0%) brightness(100%);
+                        }
                         transform: translateY(-0.25em);
                         transition: all 0.3s linear;
                     }
 
-                    .card-img-container {
-                        border-radius: 15px;
-                        box-shadow: $color__card-shadow;
-                        width: 100%;
-                        aspect-ratio: 3/2;
-
-                        img {
-                            display: block;
-                            overflow: hidden;
-                            border-radius: 15px;
-                        }
-                    }
                     .card-text-container {
+                        margin-bottom: 0;
                         p {
                             display: none;
                         }
