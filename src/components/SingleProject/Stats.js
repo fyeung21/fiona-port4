@@ -1,4 +1,5 @@
 const Stats = ({ title, brief, liveLink, githubLink, platforms, technologies }) => {
+  let techArray = technologies.join(', ');
   return (
     <>
       <section className="stats-container">
@@ -41,10 +42,20 @@ const Stats = ({ title, brief, liveLink, githubLink, platforms, technologies }) 
                   <li key={id}>{item}</li>
                 ))}
               </ul>
+              <ul> {/* Platform List as Row */}
+                {platforms.map((item, id) => (
+                  <li key={id}>{item}</li>
+                ))}
+              </ul>
             </article>
             <article>
               <h3>technologies</h3>
               <ul>
+                {technologies.map((item, id) => (
+                  <li key={id}>{item}</li>
+                ))}
+              </ul>
+              <ul> {/* Tech List as Row */}
                 {technologies.map((item, id) => (
                   <li key={id}>{item}</li>
                 ))}

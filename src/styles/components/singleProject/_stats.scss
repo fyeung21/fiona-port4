@@ -97,13 +97,32 @@
             }
 
             ul {
-                @include largeTabletQuery {
-                    @include flexRow;
-                }
+                // For Column Lists
+                &:nth-child(odd) { 
+                    @include flexColumn;
 
-                li {
                     @include largeTabletQuery {
+                        display: none;
+                    }
+                }
+                // For Row Lists
+                &:nth-child(even) {
+                    display: none;
+                    
+                    @include largeTabletQuery {
+                        @include flexRow;
+                        flex-wrap: wrap;
+                    }
+                    
+                    // Add Commas to List Items for Row Lists
+                    li {
                         margin-right: 1rem;
+                        &::after {
+                            content: ", ";
+                        }
+                        &:last-of-type:after {
+                            content: "";
+                        }
                     }
                 }
             }
