@@ -22,6 +22,11 @@
             padding: 2rem 0 2rem;
             border-bottom: 2px solid $color__shadow;
 
+            @include desktopQuery {
+                width: 860px;
+                margin: 0 auto;
+            }
+
             .tab-list {
                 @include flexRow;
                 margin-bottom: 2rem;
