@@ -2,8 +2,10 @@
 @use "../../base/mixins" as *;
 
 .page-single-project {
-    .project-nav-heading {
-        text-transform: capitalize;
+    h3 {
+        &:first-of-type { // For More Projects Subheading
+            text-transform: capitalize;
+        }
     }
     // Undo Home Page's content scroll with fixed bkg for project navigation
     .page-home {

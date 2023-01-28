@@ -59,7 +59,7 @@ const PageSingleProject = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
-            <h2 className="project-nav-heading">more projects</h2>
+            <h3>more projects</h3>
             <PageHome />
           </section>
         </>

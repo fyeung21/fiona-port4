@@ -10,7 +10,7 @@ const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
             <img src={thumbnail} alt={alt} />
           </section>
           <section className="card-text-container">
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>
               {excerpt} ...see more
             </p>

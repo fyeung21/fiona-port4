@@ -7,35 +7,28 @@
     overflow-y: scroll;
     z-index: 60;
 
+    // Hide Scroll Bar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer 10+
+
     @include desktopQuery {
         width: 860px;
         margin: 0 auto;
     }
 
-    // Hide Scroll Bar
-    scrollbar-width: none; // Firefox
-    -ms-overflow-style: none; // Internet Explorer 10+
-
-    h2 {
-        text-transform: capitalize;
-
-        @include desktopQuery {
-            font-size: 2.25rem;
-        }
-    }
-
     .bio-container {
+        @include tabletQuery {
+            margin-bottom: 5rem;
+        }
         @include desktopQuery {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5rem;
         }
 
         .bio-img-container {
             width: 200px;
             height: 200px;
-            margin: 0 auto;
-            padding-bottom: 1.5rem;
+            margin: 1.5rem auto;
 
             @include tabletQuery {
                 width: 250px;
@@ -43,7 +36,7 @@
             }
             @include desktopQuery {
                 order: 1;
-                margin: 0;
+                margin: 1.25rem 0;
             }
 
             img {
@@ -63,8 +56,8 @@
     }
 
     .skills-container {
-        h2 {
-            font-size: 1.75rem;
+        h3 {
+            text-transform: capitalize;
         }
         div {
             @include tabletQuery {
@@ -74,10 +67,6 @@
             }
             @include desktopQuery {
                 width: 60%;
-            }
-
-            h3 {
-                text-transform: uppercase;
             }
         }
     }

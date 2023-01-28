@@ -3,12 +3,12 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
 
   return (
     <section className="skills-container">
-      <h2>my tool-kit</h2>
+      <h3>my tool-kit</h3>
 
       <div className="flex-container">
       {frontEnd.length !== 0 ? (
         <article>
-          <h3>front-end</h3>
+          <h4>front-end</h4>
           <ul>
             {frontEnd.map((item, id) => (
               <li key={id}>{item}</li>
@@ -21,7 +21,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
       
       {backEnd.length !== 0 ? (
         <article>
-          <h3>back-end</h3>
+          <h4>back-end</h4>
           <ul>
             {backEnd.map((item, id) => (
               <li key={id}>{item}</li>
@@ -34,7 +34,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
 
       {mobile.length !== 0 ? (
         <article>
-          <h3>mobile</h3>
+          <h4>mobile</h4>
           <ul>
             {mobile.map((item, id) => (
               <li key={id}>{item}</li>
@@ -47,7 +47,7 @@ const Skills = ({ frontEnd, backEnd, mobile, toolSystems }) => {
 
       {toolSystems.length !== 0 ? (
         <article>
-          <h3>{'tools & systems'}</h3>
+          <h4>{'tools & systems'}</h4>
           <ul>
             {toolSystems.map((item, id) => (
               <li key={id}>{item}</li>
