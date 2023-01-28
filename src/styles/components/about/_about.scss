@@ -4,50 +4,68 @@
 .page-about {
     padding-top: 6rem;
     height: 100vh;
-    // overflow-y: scroll;
+    overflow-y: scroll;
     z-index: 60;
-    
+
+    @include desktopQuery {
+        width: 860px;
+        margin: 0 auto;
+    }
+
     // Hide Scroll Bar
     scrollbar-width: none; // Firefox
     -ms-overflow-style: none; // Internet Explorer 10+
-    
-    .flex-container {
+
+    h2 {
+        text-transform: capitalize;
 
         @include desktopQuery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-items: end;
+            font-size: 2.25rem;
         }
     }
 
-    .profile-img-container {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-        padding-bottom: 1.5rem;
-
-        @include tabletQuery {
-            width: 300px;
-            height: 300px;
-        }
-
+    .bio-container {
         @include desktopQuery {
-            width: 400px;
-            height: 400px;
-            order: 1;
-            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5rem;
         }
 
-        img {
-            border-radius: 50%;
-        }
-    }
+        .bio-img-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            padding-bottom: 1.5rem;
 
-    .location {
-        font-weight: 600;
+            @include tabletQuery {
+                width: 250px;
+                height: 250px;
+            }
+            @include desktopQuery {
+                order: 1;
+                margin: 0;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .bio-text-container {
+            @include desktopQuery {
+                width: 550px;
+            }
+
+            .location {
+                font-weight: 600;
+            }
+        }
     }
 
     .skills-container {
+        h2 {
+            font-size: 1.75rem;
+        }
         div {
             @include tabletQuery {
                 @include flexRow;
@@ -57,12 +75,17 @@
             @include desktopQuery {
                 width: 60%;
             }
+
+            h3 {
+                text-transform: uppercase;
+            }
         }
     }
 }
 
 // Hide scroll bar for Safari Browser
-.page-about::-webkit-scrollbar { // WebKit
+.page-about::-webkit-scrollbar {
+    // WebKit
     width: 0;
     height: 0;
 }

@@ -43,14 +43,14 @@ const PageAbout = () => {
             data-aos-easing="ease-in"
             data-aos-duration="1000">
             <h2>{restData.title.rendered}</h2>
-            <article className="flex-container">
-              <div className="profile-img-container">
+            <article className="bio-container">
+              <div className="bio-img-container">
                 <img
                   src={restData._embedded['wp:featuredmedia'][0].source_url}
                   alt={restData._embedded['wp:featuredmedia'][0].alt_text}
                 />
               </div>
-              <div>
+              <div className="bio-text-container">
                 <p>
                   Location: <span className="location">{restData.acf.location}</span>
                 </p>
