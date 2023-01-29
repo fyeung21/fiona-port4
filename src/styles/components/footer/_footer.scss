@@ -2,38 +2,78 @@
 @use "../../base/mixins" as *;
 
 footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+
     @include tabletQuery {
         @include flexRow;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 1rem;
-    }
-    cite {
-        font-size: 0.75rem;
+        background-color: transparent;
+        backdrop-filter: none;
     }
 
-    div {
+    .footer-container {
         @include tabletQuery {
             @include flexRow;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
         }
 
-        ul {
-            @include flexRow;
-            justify-content: space-between;
+        cite {
+            font-size: 0.75rem;
+            display: none;
+            @include tabletQuery {
+                display: block;
+            }
+        }
 
-            li {
-                padding: 0 1rem;
+        div { // Footer Message and Links
+            @include tabletQuery {
+                @include flexRow;
+                align-items: center;
+            }
 
-                a {
-                    color: $color__main-text;
-                    border-bottom: 2px solid $color__accent;
+            p {
+                display: none;
+                @include tabletQuery {
+                    display: block;
+                } 
+            }
 
-                    @include tabletQuery {
-                        border-bottom: none;
-                    }
-                    
-                    &:hover {
+            ul {
+                @include flexRow;
+                justify-content: space-between;
+                text-transform: capitalize;
+                margin-top: 0.5rem;
+                @include tabletQuery {
+                    margin-top: 1rem;
+                }
+
+                li {
+                    padding: 0 1rem;
+
+                    a {
+                        color: $color__main-text;
                         border-bottom: 2px solid $color__accent;
+
+                        @include tabletQuery {
+                            border-bottom: none;
+                        }
+
+                        &:hover {
+                            border-bottom: 2px solid $color__accent;
+                        }
                     }
                 }
             }

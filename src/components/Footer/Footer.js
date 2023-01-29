@@ -21,24 +21,41 @@ const Footer = () => {
 
   return (
     <>
-    {isLoaded ? (
-      <footer>
-        <cite>&copy; {restData[0].acf.copyright_year} Fiona Yeung</cite>
-        <div>
-          <p>{restData[0].acf.footer_message}</p>
-          <ul>
-            <li>
-              <a href={`mailto:${restData[0].acf.email_link}`} title="link to email" rel="noreferrer noopener">email</a>
-            </li>
-            <li>
-              <a href={restData[0].acf.linkedin_link.url} title="link to linkedIn" rel="noreferrer noopener">{restData[0].acf.linkedin_link.title}</a>
-            </li>
-            <li>
-              <a href={restData[0].acf.github_link.url} title="link to github" rel="noreferrer noopener">{restData[0].acf.github_link.title}</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      {isLoaded ? (
+        <footer>
+          <div className="footer-container">
+            <cite>&copy; {restData[0].acf.copyright_year} Fiona Yeung</cite>
+            <div>
+              <p>{restData[0].acf.footer_message}</p>
+              <ul>
+                <li>
+                  <a
+                    href={`mailto:${restData[0].acf.email_link}`}
+                    title="link to email"
+                    rel="noreferrer noopener">
+                    email
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={restData[0].acf.linkedin_link.url}
+                    title="link to linkedIn"
+                    rel="noreferrer noopener">
+                    {restData[0].acf.linkedin_link.title}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={restData[0].acf.github_link.url}
+                    title="link to github"
+                    rel="noreferrer noopener">
+                    {restData[0].acf.github_link.title}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       ) : (
         <p>Loading...</p>
       )}
