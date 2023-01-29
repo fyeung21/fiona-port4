@@ -6,10 +6,12 @@ import NotFoundPage from '../pages/Page404';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ParticleEffect from '../components/ParticleEffect/ParticleEffect';
+import ScrollToTop from '../components/Utils/ScrollToTop';
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <div className="wrapper">
         <main>
@@ -21,7 +23,7 @@ const AppRouter = () => {
           </Routes>
         </main>
         <Footer />
-        <ParticleEffect/>
+        <ParticleEffect />
       </div>
     </BrowserRouter>
   );
