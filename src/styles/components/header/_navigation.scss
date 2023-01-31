@@ -9,7 +9,7 @@ nav {
         li {
             transition: all 0.3s ease-out;
             text-transform: capitalize;
-            background: rgba(255, 255, 255, 0.3);
+            background: $color__nav-background;
             border-radius: 8px;
             backdrop-filter: blur(3px);
 

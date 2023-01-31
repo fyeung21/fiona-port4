@@ -10,8 +10,8 @@
 
     &:hover,
     &:focus {
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        background: $color__card-background;
+        box-shadow: $color__card-shadow;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         transform: translateY(-0.25em);
@@ -26,7 +26,7 @@
 
     .card-img-container {
         border-radius: 15px;
-        box-shadow: $color__card-shadow;
+        box-shadow: $color__thumbnail-shadow;
         aspect-ratio: 3/2;
 
         img {
