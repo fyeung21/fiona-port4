@@ -15,7 +15,8 @@ body {
     font-family: $font__body;
     color: $color__main-text;
     background-attachment: fixed;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
 
     a {
         color: $color__main-text;
@@ -34,6 +35,7 @@ h1 { // Logo
 }
 
 h2 { // Large Page Headings
+    font-family: $font__heading;
     font-size: 2rem;
     margin: 0;
 
@@ -43,6 +45,7 @@ h2 { // Large Page Headings
 }
 
 h3 { // Project Card Titles and Subheadings for Content Blocks
+    font-family: $font__heading;
     margin: 1rem 0;
     font-size: 1.5rem;
 
@@ -52,6 +55,7 @@ h3 { // Project Card Titles and Subheadings for Content Blocks
 }
 
 h4 { // Subheadings with Lists
+    font-family: $font__heading;
     text-transform: uppercase;
     font-size: 1.15rem;
     margin-bottom: 1rem;
