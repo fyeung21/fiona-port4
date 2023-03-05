@@ -27,6 +27,19 @@
                 margin: 0 auto;
             }
 
+            .tab-panel {
+                section {
+                    ul {
+                        list-style: disc;
+                        padding-inline-start: 40px;
+                    }
+                    li {
+                        padding: 0 0 1rem 0.5rem;
+                    }
+                }
+                
+            }
+
             .tab-list {
                 @include flexRow;
                 margin-bottom: 2rem;
