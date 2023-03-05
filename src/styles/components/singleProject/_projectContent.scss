@@ -36,6 +36,14 @@
                     li {
                         padding: 0 0 1rem 0.5rem;
                     }
+                    a {
+                        color: $color__link-text;
+                        font-weight: 500;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
                 }
                 
             }
