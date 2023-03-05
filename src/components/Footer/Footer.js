@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import Email from '../Icons/Email';
+import Github from '../Icons/Github';
+import Linkedin from '../Icons/Linkedin';
 
 const Footer = () => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages?acf_format=standard&id=31`;
@@ -26,30 +29,30 @@ const Footer = () => {
           <div className="footer-container">
             <cite>&copy; {restData[0].acf.copyright_year} Fiona Yeung</cite>
             <div>
-              <p>{restData[0].acf.footer_message}</p>
+              {/* <p>{restData[0].acf.footer_message}</p> */}
               <ul>
                 <li>
                   <a
                     href={`mailto:${restData[0].acf.email_link}`}
                     title="link to email"
                     rel="noreferrer noopener">
-                    email
+                    <Email/>
                   </a>
                 </li>
                 <li>
                   <a
                     href={restData[0].acf.linkedin_link.url}
-                    title="link to linkedIn"
+                    title={"link to " + restData[0].acf.linkedin_link.title}
                     rel="noreferrer noopener">
-                    {restData[0].acf.linkedin_link.title}
+                    <Linkedin/>
                   </a>
                 </li>
                 <li>
                   <a
                     href={restData[0].acf.github_link.url}
-                    title="link to github"
+                    title={"link to " + restData[0].acf.github_link.title}
                     rel="noreferrer noopener">
-                    {restData[0].acf.github_link.title}
+                      <Github/>
                   </a>
                 </li>
               </ul>
