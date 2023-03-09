@@ -59,6 +59,12 @@ const PageSingleProject = () => {
               technologies={restData[0].acf.technologies}
             />
             <ProjectContent content={restData[0].acf.project_content} />
+          </section>
+          <section
+            className="project-navigation"
+            data-aos="fade-up"
+            data-aos-easing="ease-in"
+            data-aos-duration="1000">
             <h3>more projects</h3>
             <PageHome />
           </section>
