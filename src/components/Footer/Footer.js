@@ -34,7 +34,7 @@ const Footer = () => {
                 <li>
                   <a
                     href={`mailto:${restData[0].acf.email_link}`}
-                    title="link to email"
+                    title="Link to Email"
                     rel="noreferrer noopener">
                     <Email/>
                   </a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <li>
                   <a
                     href={restData[0].acf.linkedin_link.url}
-                    title={"link to " + restData[0].acf.linkedin_link.title}
+                    title={"Link to " + restData[0].acf.linkedin_link.title}
                     rel="noreferrer noopener">
                     <Linkedin/>
                   </a>
@@ -50,7 +50,7 @@ const Footer = () => {
                 <li>
                   <a
                     href={restData[0].acf.github_link.url}
-                    title={"link to " + restData[0].acf.github_link.title}
+                    title={"Link to " + restData[0].acf.github_link.title}
                     rel="noreferrer noopener">
                       <Github/>
                   </a>

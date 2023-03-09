@@ -7,7 +7,7 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 80;
-    background-color: $color__nav-background;
+    background-color: $color__nav-background; // Mobile footer bar styles
     backdrop-filter: blur(3px);
     border-top: 1px solid rgba(255, 255, 255, 0.8);
 
@@ -16,7 +16,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 1rem;
-        background-color: transparent;
+        background-color: transparent; // Undo mobile footer bar styles
         backdrop-filter: none;
         border-top: none;
     }
@@ -26,7 +26,7 @@ footer {
             @include flexRow;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1200px; // Makes footer responsive
             width: 100%;
             margin: 0 2rem;
         }
@@ -39,23 +39,12 @@ footer {
             font-size: 0.75rem;
             display: none;
             @include tabletQuery {
-                display: block;
+                display: block; // Display copyright
             }
         }
 
         div {
-            // Footer Message and Links
-            @include tabletQuery {
-                @include flexRow;
-                align-items: center;
-            }
-
-            p {
-                display: none;
-                @include tabletQuery {
-                    display: block;
-                }
-            }
+            // Footer Icon Links
 
             ul {
                 @include flexRow;
@@ -64,25 +53,25 @@ footer {
                 margin: 0.5rem auto;
 
                 li {
-                    padding: 0 1rem;
-
+                    
                     @include tabletQuery {
-                        margin-left: 0.5rem;
-                        background: $color__nav-background;
-                        border-radius: 8px;
-                        backdrop-filter: blur(3px);
+                        transition: all 0.3s ease-out; //Animation: Text drops back to default
+                        margin-left: 0.5rem; 
+                    }
+                    
+                    &:hover {
+                        transform: translateY(-0.25em);
+                        transition: all 0.3s ease-out; //Animation: Text lifts upwards
                     }
 
                     a {
                         color: $color__main-text;
-                        border-bottom: 2px solid $color__accent;
-
-                        @include tabletQuery {
-                            border-bottom: none;
-                        }
+                        transition: all 0.3s ease-out; //Animation: Accent colour fades out
+                        padding: 0 1rem;
 
                         &:hover {
-                            border-bottom: 2px solid $color__accent;
+                            color: $color__accent;
+                            transition: all 0.3s ease-out; //Animation: Accent colour fades in
                         }
                     }
                 }
