@@ -69,18 +69,14 @@
             font-weight: 500;
 
             @include tabletQuery {
-                justify-content: flex-start; // Right align list
+                justify-content: flex-start; // Left align list
             }
 
             li {
-                margin-left: 1rem; // Related to left align
+                margin-left: 1rem; // Related to Right align
 
                 @include tabletQuery {
-                    margin: 1rem 1rem 0 0; // Readjust margin spacing when turned right align
-                }
-
-                &:last-child() {
-                    margin-left: 0; // Related to left align
+                    margin: 1rem 1rem 0 0; // Readjust margin spacing when turned Left align
                 }
             }
         }
