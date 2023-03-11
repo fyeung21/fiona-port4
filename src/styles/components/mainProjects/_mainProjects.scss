@@ -15,11 +15,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2.5rem;
-    
-        @include largeTabletQuery {
-            grid-template-columns: 1fr 1fr;
-        }
-    
     }
     
     .welcome-message {

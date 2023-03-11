@@ -1,16 +1,21 @@
 @use "../../base/variables" as *;
 @use "../../base/mixins" as *;
 
-.project-card-container {
-    max-width: 500px;
+.project-card-container { // Most outer layer card container
+    max-width: 500px; // Make regular upright cards
     margin: 0 auto;
     padding: 1rem 1rem 0 1rem;
     border-radius: 15px;
     transition: all 0.3s linear;
 
+    @include tabletQuery {
+        max-width: 820px; // Make wide horizontal cards
+        padding: 1rem;
+    }
+
     &:hover,
     &:focus {
-        background: $color__card-background;
+        background: $color__card-background; // Frosted glass effect on hover
         box-shadow: $color__card-shadow;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -20,31 +25,62 @@
 
     a {
         &:hover {
-            color: $color__main-text;
+            color: $color__main-text; // When hover, keep text color the same as main
         }
     }
 
-    .card-img-container {
+    .card-content-container { // Affects text and thumbnail content sections inside the project card
+        @include tabletQuery {
+            @include flexRow;
+            justify-content: space-between;
+            flex-direction: row-reverse; // Have text content come first then thumbnail
+        }
+    }
+
+    .card-img-container { // Affect thumbnail sizing and effects
         border-radius: 15px;
         box-shadow: $color__thumbnail-shadow;
         aspect-ratio: 3/2;
 
+        @include tabletQuery {
+            max-width: 420px;
+        }
+
         img {
             display: block;
-            overflow: hidden;
+            overflow: hidden; // Supports the rounding of edges on thumbnail
             border-radius: 15px;
         }
     }
-    .project-type-container {
+
+    .card-text-container { // Affects text content section
+        @include tabletQuery {
+            margin: 0 1.5rem 0 0;
+        }
+    }
+    .project-type-container { // Affects list of technologies section
+        @include tabletQuery {
+            justify-content: flex-start;
+        }
+
         ul {
             @include flexRow;
-            justify-content: flex-end;
+            justify-content: flex-end; // Left align list
+            font-weight: 500;
+
+            @include tabletQuery {
+                justify-content: flex-start; // Right align list
+            }
 
             li {
-                margin-left: 1rem;
+                margin-left: 1rem; // Related to left align
+
+                @include tabletQuery {
+                    margin: 1rem 1rem 0 0; // Readjust margin spacing when turned right align
+                }
 
                 &:last-child() {
-                    margin-left: 0;
+                    margin-left: 0; // Related to left align
                 }
             }
         }

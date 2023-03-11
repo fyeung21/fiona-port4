@@ -5,7 +5,7 @@ const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
   return (
     <article className="project-card-container">
       <Link to={`/projects/${slug}`} title={`link to ${slug} project description page`}>
-        <div>
+        <article className="card-content-container">
           <section className="card-img-container">
             <img src={thumbnail} alt={alt} />
           </section>
@@ -16,7 +16,7 @@ const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
             </p>
             <ProjectType type={type}/>
           </section>
-        </div>
+        </article>
       </Link>
     </article>
   );
