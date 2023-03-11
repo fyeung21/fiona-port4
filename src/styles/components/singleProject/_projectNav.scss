@@ -6,7 +6,8 @@
     margin: 0 auto;
 
     h3 {
-        &:first-of-type { // For "More Projects" Subheading
+        &:first-of-type {
+            // For "More Projects" Subheading
             text-transform: capitalize;
         }
     }
@@ -18,25 +19,40 @@
         z-index: 60;
 
         .welcome-message {
-            display: none;
+            display: none; // Remove welcome message when on project nav
         }
 
         // Project Navigation Carousel
         .main-projects-container {
             @include flexRow;
-            overflow-x: scroll;
+            overflow-x: scroll; // Add horizontal scroll for Carousel effect
             margin: 0 auto;
             padding: 2rem 0;
 
             .project-card-container {
                 padding: 1.25rem 1rem 0 1rem;
-                div {
+
+                // Affects text and thumbnail content sections inside the project card
+                .card-content-container {
                     width: 280px; //Set thumbnail size
+                    @include flexColumn; // Undo flex row from homepage's styling
 
                     .card-text-container {
-                        margin-bottom: 0;
+                        margin: 0;
                         p {
-                            display: none;
+                            display: none; // Remove short description in card for project nav
+                        }
+                    }
+                    // Affects list of technologies on project card
+                    .project-type-container {
+                        ul {
+                            justify-content: flex-end; // Right align text
+                            font-weight: 400;
+                            margin-bottom: 0.5rem;
+
+                            li {
+                                margin: 0 0 0 1rem; // Spacing for right align text
+                            }
                         }
                     }
                 }
