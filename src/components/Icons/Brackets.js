@@ -1,4 +1,4 @@
-const Code = () => {
+const Brackets = () => {
   return (
     <>
       <svg
@@ -18,4 +18,4 @@ const Code = () => {
     </>
   );
 };
-export default Code;
+export default Brackets;

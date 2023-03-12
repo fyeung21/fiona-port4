@@ -1,4 +1,4 @@
-const About = () => {
+const User = () => {
   return (
     <>
       <svg
@@ -18,4 +18,4 @@ const About = () => {
     </>
   );
 };
-export default About;
+export default User;

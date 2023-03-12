@@ -1,4 +1,4 @@
-const Contact = () => {
+const Send = () => {
     return (
       <>
         <svg
@@ -18,4 +18,4 @@ const Contact = () => {
       </>
     );
   };
-  export default Contact;
+  export default Send;
