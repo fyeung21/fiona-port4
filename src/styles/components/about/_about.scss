@@ -2,17 +2,19 @@
 @use "../../base/mixins" as *;
 
 .page-about {
-    padding-top: 6rem;
+    @include tabletQuery {
+        padding-top: 6rem;
+    }
     // height: 100vh;
     // overflow-y: scroll;
-    z-index: 60;
+    // z-index: 60;
 
     // Hide Scroll Bar
     scrollbar-width: none; // Firefox
     -ms-overflow-style: none; // Internet Explorer 10+
 
     @include desktopQuery {
-        width: 860px;
+        max-width: 820px;
         margin: 0 auto;
     }
 

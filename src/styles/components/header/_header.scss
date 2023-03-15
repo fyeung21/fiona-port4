@@ -2,10 +2,12 @@
 @use "../../base/mixins" as *;
 
 header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 80;
+    @include tabletQuery {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 80;
+    }
 
     .skip-link {
         left: 0;
@@ -30,7 +32,7 @@ header {
         @include tabletQuery {
             margin: 0 2rem;
         }
-        
+
         @include desktopQuery {
             margin: 0 auto;
         }

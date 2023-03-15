@@ -2,10 +2,12 @@
 @use "../../base/mixins" as *;
 
 .page-single-project {
-    padding-top: 6rem;
+    @include tabletQuery {
+        padding-top: 6rem;
+    }
     // height: 100vh;
     // overflow-y: scroll;
-    z-index: 60;
+    // z-index: 60;
     
     // Hide Scroll Bar
     scrollbar-width: none; // Firefox

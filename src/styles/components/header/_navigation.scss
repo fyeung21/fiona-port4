@@ -2,6 +2,12 @@
 @use "../../base/mixins" as *;
 
 .header-nav {
+    //Only display for tablet or larger view
+    display: none;
+
+    @include tabletQuery {
+        display: block;
+    }
     nav {
         ul {
             @include flexRow;

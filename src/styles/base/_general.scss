@@ -32,6 +32,11 @@ body {
 
 h1 { // Logo
     font-family: $font__heading;
+    font-size: 1.75rem;
+    
+    @include desktopQuery {
+        font-size: 2rem;
+    }
 }
 
 h2 { // Large Page Headings
