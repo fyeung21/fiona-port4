@@ -12,20 +12,22 @@ const Header = () => {
             <h1 title="link to fiona's homepage">fiona.</h1>
           </NavLink>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/" title="navigate to projects page">
-                projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" title="navigate to about me page">
-                about
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <section className="header-nav">
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/" title="navigate to projects page">
+                  projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" title="navigate to about me page">
+                  about
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
     </header>
   );

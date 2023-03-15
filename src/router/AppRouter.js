@@ -7,12 +7,14 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ParticleEffect from '../components/ParticleEffect/ParticleEffect';
 import ScrollToTop from '../components/Utils/ScrollToTop';
+import NavBar from '../components/NavBar.js/NavBar';
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Header />
+      <NavBar/>
       <div className="wrapper">
         <main>
           <Routes>
