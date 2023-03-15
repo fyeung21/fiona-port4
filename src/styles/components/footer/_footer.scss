@@ -2,23 +2,16 @@
 @use "../../base/mixins" as *;
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 80;
-    background-color: $color__nav-background; // Mobile footer bar styles
-    backdrop-filter: blur(3px);
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-
+    // Make footer fixed at bottom for tablet or larger screens
     @include tabletQuery {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 80;
+
         @include flexRow;
-        justify-content: space-between;
-        align-items: center;
         padding-bottom: 1rem;
-        background-color: transparent; // Undo mobile footer bar styles
-        backdrop-filter: none;
-        border-top: none;
     }
 
     .footer-container {
@@ -36,15 +29,21 @@ footer {
         }
 
         cite {
+            // Display copyright message at bottom of page in mobile view
             font-size: 0.75rem;
-            display: none;
+            padding-bottom: 4rem;
+
             @include tabletQuery {
-                display: block; // Display copyright
+                padding-bottom: 0;
             }
         }
 
         div {
             // Footer Icon Links
+            display: none;
+            @include tabletQuery {
+                display: block;
+            }
 
             ul {
                 @include flexRow;
@@ -53,12 +52,11 @@ footer {
                 margin: 0.5rem auto;
 
                 li {
-                    
                     @include tabletQuery {
                         transition: all 0.3s ease-out; //Animation: Text drops back to default
-                        margin-left: 0.5rem; 
+                        margin-left: 0.5rem;
                     }
-                    
+
                     &:hover {
                         transform: translateY(-0.25em);
                         transition: all 0.3s ease-out; //Animation: Text lifts upwards
