@@ -10,6 +10,21 @@
     display: flex;
     flex-direction: column;
 }
+@mixin scrollableContent {
+    // For scrollable content inside a fullscreen div
+    // To achieve the scrollable content over a fixed background with animations look
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 60;
+    
+    // Hide Scroll Bar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer 10+
+}
+@mixin hideWebkitScrollbar {
+    width: 0;
+    height: 0;
+}
 
 // MEDIA QUERIES
 
