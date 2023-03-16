@@ -1,0 +1,47 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+.contact-popup {
+    // For various contact links to show on toggle, found in navBar (mobile view)
+    footer {
+        // Reuse footer component and apply navbar-like background
+        position: fixed;
+        right: 0;
+        bottom: 3.25rem;
+        z-index: 80;
+        background-color: $color__nav-background;
+        backdrop-filter: blur(3px);
+        border-radius: 15px 15px 0 0;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: none;
+
+        .footer-container {
+            cite {
+                // Remove copyright info because of reused footer component
+                display: none;
+            }
+
+            div {
+                // Display contact icons
+                display: block;
+
+                ul {
+                    // Have contact icons be in column alignment
+                    @include flexColumn;
+                    flex-direction: column-reverse;
+                    margin: 0;
+
+                    li {
+                        // Adjustments to spacing between icon items
+                        margin: 1.5rem 0;
+                        
+                        a {
+                            // Adjustments to clickable link area (more padding for thumb presses)
+                            padding: 1.25rem 1.75rem 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
