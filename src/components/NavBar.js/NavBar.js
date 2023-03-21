@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import Brackets from '../Icons/Brackets';
 import Send from '../Icons/Send';
 import User from '../Icons/User';
-import ContactPopup from './ContactPopup';
 
 const NavBar = () => {
   return (
