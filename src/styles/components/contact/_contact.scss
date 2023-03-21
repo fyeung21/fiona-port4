@@ -16,16 +16,28 @@
                 ul {
                     // Have contact icons be in column alignment
                     @include flexColumn;
-                    flex-direction: column-reverse;
                     align-items: center;
 
                     li {
                         // Adjustments to spacing between icon items
-                        margin: 3rem auto;
+                        background: $color__card-background; // Frosted glass effect
+                        padding: 3rem 0;
+                        margin: 1rem auto;
+                        border-radius: 15px;
+                        transition: all 0.3s linear;
+
+                        &:hover,
+                        &:focus {
+                            box-shadow: $color__card-shadow;
+                            backdrop-filter: blur(5px);
+                            -webkit-backdrop-filter: blur(5px);
+                            transform: translateY(-0.25em);
+                            transition: all 0.3s linear;
+                        }
 
                         a {
                             // Adjustments to clickable link area (more padding for thumb presses)
-                            padding: 3rem;
+                            padding: 3rem 9rem;
                         }
                     }
                 }
