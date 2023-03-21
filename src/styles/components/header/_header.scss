@@ -2,7 +2,9 @@
 @use "../../base/mixins" as *;
 
 header {
-    @include tabletQuery {
+    position: relative;
+
+    @include desktopQuery {
         position: fixed;
         left: 0;
         right: 0;
@@ -33,7 +35,7 @@ header {
             margin: 0 2rem;
         }
 
-        @include desktopQuery {
+        @include largeDesktopQuery {
             margin: 0 auto;
         }
     }

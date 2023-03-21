@@ -43,3 +43,6 @@
 @mixin desktopQuery {
     @media (min-width: 64em) { @content; } // 1024px
 }
+@mixin largeDesktopQuery {
+    @media (min-width: 75em) { @content; } // 1200px
+}

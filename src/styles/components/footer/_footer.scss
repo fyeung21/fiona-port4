@@ -24,7 +24,7 @@ footer {
             margin: 0 2rem;
         }
 
-        @include desktopQuery {
+        @include largeDesktopQuery {
             margin: 0 auto;
         }
 
