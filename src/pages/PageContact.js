@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
+import Footer from '../components/Footer/Footer';
 
 const PageContact = () => {
   const restPath =
@@ -45,6 +46,7 @@ const PageContact = () => {
             <article className="contact-container">
               <p>{restData.acf.contact_message}</p>
             </article>
+            <Footer />
           </section>
         </>
       ) : (

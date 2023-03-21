@@ -1,0 +1,35 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+.page-contact {
+    footer {
+        .footer-container {
+            cite {
+                // Remove copyright info because of reused footer component
+                display: none;
+            }
+
+            div {
+                // Display contact icons
+                display: block;
+
+                ul {
+                    // Have contact icons be in column alignment
+                    @include flexColumn;
+                    flex-direction: column-reverse;
+                    align-items: center;
+
+                    li {
+                        // Adjustments to spacing between icon items
+                        margin: 3rem auto;
+
+                        a {
+                            // Adjustments to clickable link area (more padding for thumb presses)
+                            padding: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
