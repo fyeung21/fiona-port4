@@ -22,12 +22,13 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li title="Click for ways to contact me">
-            <Send />
-            <p>contact</p>
+            <NavLink to="/contact">
+              <Send />
+              <p>contact</p>
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <ContactPopup />
     </section>
   );
 };

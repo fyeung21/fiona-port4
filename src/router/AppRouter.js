@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer';
 import ParticleEffect from '../components/ParticleEffect/ParticleEffect';
 import ScrollToTop from '../components/Utils/ScrollToTop';
 import NavBar from '../components/NavBar.js/NavBar';
+import PageContact from '../pages/PageContact';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Routes>
             <Route path="/" element={<PageHome />} />
             <Route path="/about" element={<PageAbout />} />
+            <Route path="/contact" element={<PageContact />} />
             <Route path="/projects/:slug" element={<PageSingleProject />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
