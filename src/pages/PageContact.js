@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import AOS from 'aos';
 
 const PageContact = () => {
   const restPath =
@@ -21,6 +22,12 @@ const PageContact = () => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <>
       {isLoaded ? (
@@ -29,7 +36,11 @@ const PageContact = () => {
             <meta charSet="utf-8" />
             <title>Contact Me | Fiona's Portfolio Website</title>
           </Helmet>
-          <section className="page-contact">
+          <section
+            className="page-contact"
+            data-aos="fade-in"
+            data-aos-easing="ease-in"
+            data-aos-duration="1000">
             <h2>{restData.title.rendered}</h2>
             <article className="contact-container">
               <p>{restData.acf.contact_message}</p>
