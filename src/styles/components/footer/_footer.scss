@@ -2,8 +2,8 @@
 @use "../../base/mixins" as *;
 
 footer {
-    // Make footer fixed at bottom for tablet or larger screens
-    @include tabletQuery {
+    // Make footer fixed at bottom for desktop or larger screens
+    @include desktopQuery {
         position: fixed;
         left: 0;
         right: 0;
@@ -21,6 +21,8 @@ footer {
             align-items: center;
             max-width: 1200px; // Makes footer responsive
             width: 100%;
+        }
+        @include desktopQuery {
             margin: 0 2rem;
         }
 
@@ -31,7 +33,7 @@ footer {
         cite {
             // Display copyright message at bottom of page in mobile view
             font-size: 0.75rem;
-            padding-bottom: 4rem;
+            padding-bottom: 5.5rem;
 
             @include tabletQuery {
                 padding-bottom: 0;
