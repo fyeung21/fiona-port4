@@ -2,8 +2,8 @@
 @use "../../base/mixins" as *;
 
 .page-home {
-    @include tabletQuery {
-        padding-top: 6rem;
+    @include desktopQuery {
+        @include paddingTop;
     }
 
     .main-projects-container {

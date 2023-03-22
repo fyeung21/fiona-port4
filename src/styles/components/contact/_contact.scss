@@ -2,13 +2,10 @@
 @use "../../base/mixins" as *;
 
 .page-contact {
-    @include tabletQuery {
-        padding-top: 6rem; // Push page down because of fixed header
-    }
-    
     @include desktopQuery {
         max-width: 820px; // constrain content on desktop for better readability
         margin: 0 auto;
+        @include paddingTop; // Push page down because of fixed header
     }
 
     footer {

@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: column;
 }
+@mixin paddingTop {
+    // To push content down the page 
+    // For when header position is fixed and floats on top of the page
+    padding-top: 6rem;
+}
 @mixin scrollableContent {
     // For scrollable content inside a fullscreen div
     // To achieve the scrollable content over a fixed background with animations look

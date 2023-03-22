@@ -2,8 +2,8 @@
 @use "../../base/mixins" as *;
 
 .page-single-project {
-    @include tabletQuery {
-        padding-top: 6rem;
+    @include desktopQuery {
+        @include paddingTop; // Push page down because of fixed header
     }
 
     .project-content-container {
