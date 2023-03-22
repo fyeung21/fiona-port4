@@ -51,7 +51,7 @@
             text-transform: capitalize;
         }
         div {
-            @include tabletQuery {
+            @include largeTabletQuery {
                 @include flexRow;
                 justify-content: space-between;
                 width: 70%;
