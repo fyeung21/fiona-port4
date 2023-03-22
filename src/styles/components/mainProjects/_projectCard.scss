@@ -8,7 +8,7 @@
     border-radius: 15px;
     transition: all 0.3s linear;
 
-    @include tabletQuery {
+    @include medScreenQuery {
         max-width: 820px; // Make wide horizontal cards
         padding: 1rem;
     }
@@ -30,7 +30,7 @@
     }
 
     .card-content-container { // Affects text and thumbnail content sections inside the project card
-        @include tabletQuery {
+        @include medScreenQuery {
             @include flexRow;
             justify-content: space-between;
             flex-direction: row-reverse; // Have text content come first then thumbnail
@@ -42,7 +42,7 @@
         box-shadow: $color__thumbnail-shadow;
         aspect-ratio: 3/2;
 
-        @include tabletQuery {
+        @include medScreenQuery {
             max-width: 420px;
         }
 
@@ -54,12 +54,12 @@
     }
 
     .card-text-container { // Affects text content section
-        @include tabletQuery {
+        @include medScreenQuery {
             margin: 0 1.5rem 0 0;
         }
     }
     .project-type-container { // Affects list of technologies section
-        @include tabletQuery {
+        @include medScreenQuery {
             justify-content: flex-start;
         }
 
@@ -68,14 +68,14 @@
             justify-content: flex-end; // Left align list
             font-weight: 500;
 
-            @include tabletQuery {
+            @include medScreenQuery {
                 justify-content: flex-start; // Left align list
             }
 
             li {
                 margin-left: 1rem; // Related to Right align
 
-                @include tabletQuery {
+                @include medScreenQuery {
                     margin: 1rem 1rem 0 0; // Readjust margin spacing when turned Left align
                 }
             }
