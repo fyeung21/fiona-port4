@@ -2,8 +2,7 @@
 @use "../../base/mixins" as *;
 
 .project-navigation {
-    max-width: 820px;
-    margin: 0 auto;
+    @include maxWidthContent; // Constrains content to a readable width
 
     h3 {
         &:first-of-type {
