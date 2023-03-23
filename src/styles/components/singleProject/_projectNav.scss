@@ -4,12 +4,27 @@
 .project-navigation {
     @include maxWidthContent; // Constrains content to a readable width
 
-    h3 {
-        &:first-of-type {
-            // For "More Projects" Subheading
-            text-transform: capitalize;
+    .project-nav-heading-container {
+        // "More Projects" subheading container
+        @include flexRow;
+        align-items: baseline;
+
+        h3 {
+            &:first-of-type {
+                // For "More Projects" Subheading
+                text-transform: capitalize;
+                margin-right: 1rem;
+            }
+        }
+
+        // "Scroll for more" help text
+        p {
+            &:first-of-type {
+                font-size: 1rem;
+            }
         }
     }
+
     // Undo Home Page's content scroll with fixed bkg for project navigation
     .page-home {
         padding-top: 0;

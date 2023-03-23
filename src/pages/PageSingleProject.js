@@ -65,7 +65,10 @@ const PageSingleProject = () => {
             data-aos="fade-up"
             data-aos-easing="ease-in"
             data-aos-duration="1000">
-            <h3>more projects</h3>
+            <article className="project-nav-heading-container">
+              <h3>{restData[0].acf.more_projects_heading}</h3>
+              <p>{restData[0].acf.scroll_help_text}</p>
+            </article>
             <PageHome />
           </section>
         </>
