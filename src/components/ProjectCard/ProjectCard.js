@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ProjectType from './ProjectType';
 
-const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
+const ProjectCard = ({thumbnail, alt, title, excerpt, type, seeMore, slug}) => {
   return (
     <article className="project-card-container">
       <Link to={`/projects/${slug}`} title={`link to ${slug} project description page`}>
@@ -12,7 +12,7 @@ const ProjectCard = ({thumbnail, alt, title, excerpt, type, slug}) => {
           <section className="card-text-container">
             <h3>{title}</h3>
             <p>
-              {excerpt} ...see more
+              {excerpt} {seeMore}
             </p>
             <ProjectType type={type}/>
           </section>

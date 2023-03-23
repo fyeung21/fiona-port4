@@ -45,6 +45,7 @@ const MainProjects = ({ projectArr }) => {
                 title={item.title.rendered}
                 excerpt={item.acf.project_excerpt}
                 type={item._embedded['wp:term'][0]}
+                seeMore={item.acf.see_more}
               />
             ))}
           </section>
