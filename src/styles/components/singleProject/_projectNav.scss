@@ -25,8 +25,12 @@
         .main-projects-container {
             @include flexRow;
             overflow-x: scroll; // Add horizontal scroll for Carousel effect
-            margin: 0 auto;
-            padding: 2rem 0;
+            margin: 0 auto 2rem;
+            padding: 2rem 0 3rem;
+
+            @include largeDesktopQuery {
+                margin: 0 auto 6rem;
+            }
 
             .project-card-container {
                 padding: 1.25rem 1rem 0 1rem;
