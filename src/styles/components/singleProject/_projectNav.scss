@@ -29,7 +29,7 @@
             padding: 2rem 0 3rem;
 
             @include largeDesktopQuery {
-                margin: 0 auto 6rem;
+                margin: 0 auto 6rem; // Increase margin bottom of carousel to allow access to horizontal scroll when footer is position absolute
             }
 
             .project-card-container {
