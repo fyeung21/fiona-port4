@@ -54,7 +54,7 @@ const PageAbout = () => {
                 <p>
                   Location: <span className="location">{restData.acf.location}</span>
                 </p>
-                <p>{restData.acf.bio}</p>
+                <section dangerouslySetInnerHTML={{ __html: restData.acf.bio }}></section>
               </div>
             </article>
             <Skills
