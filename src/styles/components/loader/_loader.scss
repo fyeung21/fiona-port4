@@ -4,9 +4,11 @@
 .loading-container {
     @include flexColumn;
     align-items: center;
+    justify-content: center;
+    height: 600px;
 
     .dots-container {
-        $colors: #EDF0FE, #B4BDEA, #94A1E1, #7A8ADB, #5468CF;
+        $colors: #edf0fe, #b4bdea, #94a1e1, #7a8adb, #5468cf;
         display: flex;
 
         .dot {
