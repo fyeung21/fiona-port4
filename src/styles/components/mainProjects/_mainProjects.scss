@@ -3,17 +3,23 @@
 
 .page-home {
     @include desktopQuery {
-        @include paddingTop;
+        @include paddingTop; // Push content down for when header is fixed
+        @include paddingBottom; // Adding space between end of content and bottom of window for when footer is fixed
     }
 
     .main-projects-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2.5rem;
+        margin-bottom: 6rem;
+        
+        @include desktopQuery {
+            margin-bottom: 0;
+        }
     }
     
     .welcome-message {
-        max-width: 800px;
+        @include maxWidthContent;
         margin: 0 auto 4rem;
     }
 }

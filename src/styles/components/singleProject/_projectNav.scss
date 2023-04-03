@@ -27,7 +27,9 @@
 
     // Undo Home Page's content scroll with fixed bkg for project navigation
     .page-home {
-        padding-top: 0;
+        @include largeDesktopQuery {
+            padding: 0 0 4rem;
+        }
         height: fit-content;
         overflow-y: visible;
         z-index: 60;
@@ -41,10 +43,10 @@
             @include flexRow;
             overflow-x: scroll; // Add horizontal scroll for Carousel effect
             margin: 0 auto 2rem;
-            padding: 2rem 0 3rem;
+            padding: 2rem 0 2.5rem;
 
             @include largeDesktopQuery {
-                margin: 0 auto 6rem; // Increase margin bottom of carousel to allow access to horizontal scroll when footer is position absolute
+                margin: 0 auto 3rem; // Increase margin bottom of carousel to allow access to horizontal scroll when footer is position absolute
             }
 
             .project-card-container {

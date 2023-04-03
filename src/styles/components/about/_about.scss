@@ -5,6 +5,7 @@
     @include desktopQuery {
         @include maxWidthContent; // Constrains content to a readable width
         @include paddingTop; // Push page down because of fixed header
+        @include paddingBottom; // Adding space between end of content and bottom of window for when footer is fixed
     }
 
     .bio-container {
@@ -47,6 +48,12 @@
     }
 
     .skills-container {
+        margin: 0 auto 4rem;
+
+        @include desktopQuery {
+            margin: 0 auto 2rem;
+        }
+
         h3 {
             text-transform: capitalize;
         }
