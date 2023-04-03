@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Loader from '../components/Loader/Loader';
 
 const NotFoundPage = () => {
   return (
@@ -13,6 +14,7 @@ const NotFoundPage = () => {
         <p>Oops! You have reached the 404 page.</p>
         <Link to="/work">Back to Home</Link>
       </section>
+        <Loader/>
     </>
   );
 };

@@ -7,6 +7,9 @@
 
 // COMPONENTS
 
+/* Loader */
+@use './components/loader/loader';
+
 /* Header */
 @use './components/header/header';
 @use './components/header/navigation';
