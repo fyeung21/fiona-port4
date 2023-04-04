@@ -36,14 +36,15 @@ const PageAbout = () => {
         <>
           <Helmet>
             <meta charSet="utf-8" />
-            <title>About Me | Fiona's Portfolio Website</title>
+            <title>{restData.title.rendered} | Fiona's Portfolio Website</title>
           </Helmet>
+          {console.log(restData.acf)}
           <section
             className="page-about"
             data-aos="fade-in"
             data-aos-easing="ease-in"
             data-aos-duration="1000">
-            <h2>{restData.title.rendered}</h2>
+            <h2>{restData.acf.about_heading}</h2>
             <article className="bio-container">
               <div className="bio-img-container">
                 <img

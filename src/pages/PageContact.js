@@ -36,22 +36,22 @@ const PageContact = () => {
         <>
           <Helmet>
             <meta charSet="utf-8" />
-            <title>Contact Me | Fiona's Portfolio Website</title>
+            <title>{restData.title.rendered} | Fiona's Portfolio Website</title>
           </Helmet>
           <section
             className="page-contact"
             data-aos="fade-in"
             data-aos-easing="ease-in"
             data-aos-duration="1000">
-            <h2>{restData.title.rendered}</h2>
+            <h2>{restData.acf.contact_heading}</h2>
             <article className="contact-container">
-              <p>{restData.acf.contact_message}</p>
+              <section dangerouslySetInnerHTML={{ __html: restData.acf.contact_message }}></section>
             </article>
             <Footer />
           </section>
         </>
       ) : (
-        <Loader/>
+        <Loader />
       )}
     </>
   );

@@ -37,7 +37,7 @@ const PageHome = () => {
         <>
           <Helmet>
             <meta charSet="utf-8" />
-            <title>Home | Fiona's Portfolio Website</title>
+            <title>{restData.title.rendered} | Fiona's Portfolio Website</title>
           </Helmet>
           <section className="page-home">
           <p
