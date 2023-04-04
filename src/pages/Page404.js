@@ -10,7 +10,7 @@ const NotFoundPage = () => {
         <title>Page Not Found | Fiona's Portfolio Website</title>
       </Helmet>
       <section className="page-not-found">
-        <h2>This is the 404 page</h2>
+        <h2>Page Not Found</h2>
         <p>Oops! You have reached the 404 page.</p>
         <Link to="/work">Back to Home</Link>
       </section>

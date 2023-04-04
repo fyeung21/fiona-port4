@@ -1,0 +1,23 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+.page-not-found {
+    @include desktopQuery {
+        @include maxWidthContent; // Constrains content to a readable width
+        @include paddingTop; // Push page down because of fixed header
+        @include paddingBottom; // Adding space between end of content and bottom of window for when footer is fixed
+    }
+
+    p {
+        margin: 3rem auto;
+    }
+
+    a {
+        color: $color__accent;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
