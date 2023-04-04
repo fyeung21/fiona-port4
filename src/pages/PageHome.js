@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import MainProjects from '../components/MainProjects/MainProjects';
 import AOS from 'aos';
+import Loader from '../components/Loader/Loader';
 
 const PageHome = () => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/31?&_embed&acf_format=standard`;
@@ -53,7 +54,7 @@ const PageHome = () => {
           </section>
         </>
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );

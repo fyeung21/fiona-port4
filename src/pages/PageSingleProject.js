@@ -6,6 +6,7 @@ import Stats from '../components/SingleProject/Stats';
 import ProjectContent from '../components/SingleProject/ProjectContent';
 import PageHome from './PageHome';
 import AOS from 'aos';
+import Loader from '../components/Loader/Loader';
 
 const PageSingleProject = () => {
   const { slug } = useParams();
@@ -73,7 +74,7 @@ const PageSingleProject = () => {
           </section>
         </>
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );

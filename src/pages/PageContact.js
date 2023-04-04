@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import Footer from '../components/Footer/Footer';
+import Loader from '../components/Loader/Loader';
 
 const PageContact = () => {
   const restPath =
@@ -50,7 +51,7 @@ const PageContact = () => {
           </section>
         </>
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );

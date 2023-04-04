@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import NavCard from './NavCard';
 import Placeholder from '../coffee-wireframes.jpg';
+import Loader from '../Loader/Loader';
 
 const ProjectNav = () => {
   const { slug } = useParams();
@@ -36,7 +37,7 @@ const ProjectNav = () => {
           </div>
         </>
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );

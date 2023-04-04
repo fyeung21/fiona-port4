@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Email from '../Icons/Email';
 import Github from '../Icons/Github';
 import Linkedin from '../Icons/Linkedin';
+import Loader from '../Loader/Loader';
 
 const Footer = () => {
   const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages?acf_format=standard&id=31`;
@@ -59,7 +60,7 @@ const Footer = () => {
           </div>
         </footer>
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );
