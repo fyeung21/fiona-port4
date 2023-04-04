@@ -5,7 +5,8 @@ import Linkedin from '../Icons/Linkedin';
 import Loader from '../Loader/Loader';
 
 const Footer = () => {
-  const restPath = `https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages?acf_format=standard&id=31`;
+  const restPath =
+    'https://fiona-yeung.com/wp-portfolio/wp-json/wp/v2/pages/31?&_embed&acf_format=standard';
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -28,31 +29,31 @@ const Footer = () => {
       {isLoaded ? (
         <footer>
           <div className="footer-container">
-            <cite>&copy; {restData[2].acf.copyright_year} Fiona Yeung</cite>
+            <cite>&copy; {restData.acf.copyright_year} Fiona Yeung</cite>
             <div>
               <ul>
                 <li>
                   <a
-                    href={`mailto:${restData[2].acf.email_link}`}
+                    href={`mailto:${restData.acf.email_link}`}
                     title="Link to Email"
                     rel="noreferrer noopener">
-                    <Email/>
+                    <Email />
                   </a>
                 </li>
                 <li>
                   <a
-                    href={restData[2].acf.linkedin_link.url}
-                    title={"Link to " + restData[2].acf.linkedin_link.title}
+                    href={restData.acf.linkedin_link.url}
+                    title={'Link to ' + restData.acf.linkedin_link.title}
                     rel="noreferrer noopener">
-                    <Linkedin/>
+                    <Linkedin />
                   </a>
                 </li>
                 <li>
                   <a
-                    href={restData[2].acf.github_link.url}
-                    title={"Link to " + restData[2].acf.github_link.title}
+                    href={restData.acf.github_link.url}
+                    title={'Link to ' + restData.acf.github_link.title}
                     rel="noreferrer noopener">
-                      <Github/>
+                    <Github />
                   </a>
                 </li>
               </ul>
@@ -60,7 +61,7 @@ const Footer = () => {
           </div>
         </footer>
       ) : (
-        <Loader/>
+        <Loader />
       )}
     </>
   );
