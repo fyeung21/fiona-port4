@@ -28,12 +28,12 @@ const Footer = () => {
       {isLoaded ? (
         <footer>
           <div className="footer-container">
-            <cite>&copy; {restData[1].acf.copyright_year} Fiona Yeung</cite>
+            <cite>&copy; {restData[2].acf.copyright_year} Fiona Yeung</cite>
             <div>
               <ul>
                 <li>
                   <a
-                    href={`mailto:${restData[1].acf.email_link}`}
+                    href={`mailto:${restData[2].acf.email_link}`}
                     title="Link to Email"
                     rel="noreferrer noopener">
                     <Email/>
@@ -41,16 +41,16 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href={restData[1].acf.linkedin_link.url}
-                    title={"Link to " + restData[1].acf.linkedin_link.title}
+                    href={restData[2].acf.linkedin_link.url}
+                    title={"Link to " + restData[2].acf.linkedin_link.title}
                     rel="noreferrer noopener">
                     <Linkedin/>
                   </a>
                 </li>
                 <li>
                   <a
-                    href={restData[1].acf.github_link.url}
-                    title={"Link to " + restData[1].acf.github_link.title}
+                    href={restData[2].acf.github_link.url}
+                    title={"Link to " + restData[2].acf.github_link.title}
                     rel="noreferrer noopener">
                       <Github/>
                   </a>
